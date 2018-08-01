@@ -1,8 +1,8 @@
 
 :root {
 	--color-navy: #005587;
-	--color-dark: #231f20;
-	--color-dark-heading: #1d1e1f;
+	--color-dark-standard: #231f20;
+	--color-dark-special: #1d1e1f;
 	--color-light: #ffffff;
 	--color-field-border: #75787b;
 	--color-brushstroke: #dadbdc;
@@ -13,7 +13,42 @@
 
 	--spacer: calc(8px + 3.47222vmin);
 	--spacer-small: calc(8px + 2.08333vmin);
+
+	background-color: var(--color-dark-special);
+	font-size: 16px;
 }
+
+
+
+
+
+/*#region ==> UI Components */
+.button {
+	display: inline-block;
+	min-height: 48px;
+	min-width: 48px;
+	padding: 1.125rem 1.5625rem;
+	border-radius: 8px;
+	cursor: pointer;
+	
+  font-family: var(--font-roboto);
+	font-size: 1rem;
+	text-transform: uppercase;
+  letter-spacing: 0.03125rem;
+  color: var(--color-dark-special);
+}
+	.button-light {
+		background-color: var(--color-light);
+	}
+	.button-dark {
+		background-color: var(--color-navy);
+	}
+
+
+#button-masthead {
+	margin-top: var(--spacer-small);
+}
+/*#endregion ==> UI Components */
 
 
 
@@ -56,6 +91,14 @@ header {
 				margin-left: calc(var(--spacer)/2);
 				margin-right: calc(var(--spacer)/2);
 				white-space: nowrap;
+
+				display: flex;
+				flex-flow: column nowrap;
+				justify-content: center;
+				align-items: center;
+				align-content: center;
+				min-height: 48px;
+				min-width: 48px;
 			}
 			.nav-item:first-of-type {
 				margin-left: 0;
@@ -76,24 +119,14 @@ header {
 	height: 100vh;
 	width: 100%;
 	top: 0;
-	background-color: var(--color-dark);
+	background-color: var(--color-dark-standard);
 }
-#background-video-wrapper:before { /* Video Overlay */
-	content: "";
-	background: var(--color-video-overlay);
-
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-#background-video {
-	object-fit: cover;
-	/*TODO: set object-position property */
-	width: 100%;
-	height: 100%;
-}
+	#background-video {
+		object-fit: cover;
+		/*TODO: set object-position property */
+		width: 100%;
+		height: 100%;
+	}
 /*#endregion ==> Background Video */
 
 
@@ -105,11 +138,22 @@ header {
 	width: 100vw;
 	height: calc( 100vh - 205px ); /* Height of header */
 	padding: var(--spacer);
+
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
 }
-	#pane-masthead {
-		display: flex;
-		flex-flow: column nowrap;
-		justify-content: center;
+
+
+#pane-masthead {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+}
+	#wrapper-masthead-content {
+		width: 100%;
+		max-width: 1018px;
 	}
 /*#endregion ==> Panes */
 
@@ -119,19 +163,17 @@ header {
 
 /*#region ==> Footer */
 footer {
-	background-color: var(--color-dark);
+	background-color: var(--color-dark-special);
 	text-align: center;
 	padding: var(--spacer);
 }
-address {
-	margin: var(--spacer-small) auto;
-}
-[role="contentinfo"] > * {
-	margin: var(--spacer-small) auto;
-}
-address {
-	font-style: normal;
-}
+	address {
+		margin: var(--spacer-small) auto;
+		font-style: normal;
+	}
+	[role="contentinfo"] * {
+		margin: var(--spacer-small) auto;
+	}
 /*#endregion ==> Footer */
 
 
@@ -141,17 +183,35 @@ address {
 /*#region ==> Typography */
 .typo-nav-item {
   font-family: var(--font-roboto);
-	font-size: 18px;
+	font-size: 1.125rem;
 	text-transform: uppercase;
   font-weight: 500;
   line-height: 1;
-	letter-spacing: 1px;
+	letter-spacing: 0.0625rem;
 }
+.typo-heading-overline {
+  font-family: var(--font-roboto);
+	font-size: 1.5rem;
+	text-transform: uppercase;
+  font-weight: 500;
+  line-height: 1.33333;
+  letter-spacing: 0.0625rem;
+}
+.typo-heading-times {
+	font-family: var(--font-times);
+  font-size: 3.4375rem;
+  font-weight: bold;
+  line-height: 1.45;
+	color: var(--color-light);
+	
+	margin: 0;
+}
+.typo-heading {}
 .typo-color-light {
 	color: var(--color-light);
 }
 .typo-color-dark {
-	color: var(--color-dark);
+	color: var(--color-dark-standard);
 }
 a:link {
 	color: inherit;
@@ -174,7 +234,7 @@ a:active {
 /*#region ==> Media Queries */
 @media only screen and (max-width: 360px) {
 	.nav-item {
-		font-size: 16px;
+		font-size: 1rem;
 	}
 }
 
@@ -187,8 +247,27 @@ a:active {
 		margin-right: 0;
 	}
 	nav {
-		margin-top: var(--spacer-small);
+		margin-top: var(--spacer);
 		justify-content: center;
 	}
 }
 /*#endregion ==> Media Queries */
+
+
+
+
+
+/*
+@media only screen and
+		(min-width: Npx),
+		(max-width: Npx),
+		(aspect-ratio: W/H),
+		(orientation: [portrait/landscape]),
+		(resolution: Ndpi),
+		(any-hover: [none/hover]),
+		(scripting: [none/initial-only/enabled])
+*/
+
+/*
+@media only speech {}
+*/
