@@ -1,0 +1,21 @@
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	min-width: 100vw;
+	min-height: 100vh;
+	box-sizing: border-box;
+}
+body {
+	min-width: 100vw;
+  min-height: 100vh;
+}
+main {
+  min-width: 100vw;
+  min-height: 100vh;
+}

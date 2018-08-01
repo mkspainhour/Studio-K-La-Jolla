@@ -9,9 +9,10 @@
 	<meta name="description" content=""><!--TODO <meta> description-->
 
 	<!--STYLESHEETS-->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
-	<link href="https://fonts.googleapis.com/css?family=Roboto:300,500" rel="stylesheet">
-	<link rel="stylesheet" href="Stylesheets/global.css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" type="text/css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,500" type="text/css" rel="stylesheet">
+	<link href="Stylesheets/resets.css" type="text/css" rel="stylesheet">
+	<link href="Stylesheets/global.css" type="text/css" rel="stylesheet">
 
 	<!--ICONS-->
 	<!--TODO Favicons-->
@@ -19,40 +20,59 @@
 
 	<body><main role="main">
 		
-		<header class="page-header" role="banner">
-			<a href="/index.html"><img aria-label="Studio K La Hoya Logo" class="logo" src="Resources/Images/logo-white.png"></a>
-			<nav class="light-text" role="navigation">
-				<a href="/index.html">		<h3 class="navigation-item">Home</h3></a>
-				<a href="/services.html">	<h3 class="navigation-item">Services</h3></a>
-				<a href="/about.html">		<h3 class="navigation-item">About Kurt</h3></a>
-			</nav>
-		</header>
 		
-		<div class="background-video-wrapper">
-			<video class="background-video"
+
+
+
+		<header role="banner">
+			<div id="wrapper-header-content">
+				<a id="logo-wrapper" href="index.html">
+					<img src="Resources/Images/logo-white.png" id="img-logo" aria-label="Studio K La Hoya Logo">
+				</a>
+
+				<nav role="navigation">
+					<h3 class="nav-item typo-nav-item typo-color-light"><a href="index.html">Home</a></h3>
+					<h3 class="nav-item typo-nav-item typo-color-light"><a href="services.html">Services</a></h3>
+					<h3 class="nav-item typo-nav-item typo-color-light"><a href="about.html">About Kurt</a></h3>
+				</nav>
+			</div>
+		</header>
+
+
+		
+		<section id="pane-masthead" class="pane typo-color-light" role="region">
+			<div id="masthead-text-wrapper">
+				<h2 id="" class="">Come On In</h2>
+				<h1 id="" class="">Arch, curl and spiral yourself to better health</h1>
+			</div>
+		</section>
+
+
+
+		<div id="background-video-wrapper">
+			<video id="background-video"
 				autoplay loop muted
 				poster="Resources/Images/image1.png"
-				src="URL_GOES_HERE"> <!--TEMP masthead video src=-->
+				src="URL_GOES_HERE">
 			</video>
 		</div>
 		
-		<section id="pane-masthead" class="pane light-text" role="region">
-			<div id="masthead-text-wrapper">
-				<h2 id="masthead-small-heading" class="small-heading">Come On In</h2>
-				<h1 id="masthead-large-heading" class="large-heading">Arch, curl and spiral yourself to better health</h1>
-			</div>
-		</section>
-		
-		<footer class="light-text">
+
+
+		<footer class="typo-color-light">
 			<address>
-				<p aria-label="Phone Number" class="phone-number standard-text">555-555-5555</p>
+				<p aria-label="Phone Number" class="phone-number">555-555-5555</p>
 			</address>
 			<div role="contentinfo">
 				<p aria-label="Copyright" class="standard-text">© 2018 Kurt Kikuchi-Lopez</p>
-				<p aria-label="Gyrotonic brand terms" class="small-text"><span class="gyrotonic-logo">Gyrotonic<span class="gyrotonic-logo-registered-trademark-symbol"><sup>®</sup></span></span> is a registered trademark of Gyrotonic Sales Corp. and is used with their permission.</p>
+				<p aria-label="Gyrotonic brand terms" class=""><span class="gyrotonic-logo">Gyrotonic<span class="gyrotonic-logo-registered-trademark-symbol"><sup>®</sup></span></span> is a registered trademark of Gyrotonic Sales Corp. and is used with their permission.</p>
 			</div>
 		</footer>
 		
+
+
+
+
 	</main></body>
 
 </html>
