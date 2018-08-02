@@ -11,42 +11,45 @@
 	--font-roboto: "Roboto", sans-serif;
 	--font-times: "TimesNewRomanPSMT", "Times New Roman", "Times-Roman", "Times Roman", sans-serif;
 
-	--spacer: calc(8px + 3.47222vmin);
-	--spacer-small: calc(8px + 2.08333vmin);
-	--spacer-right-side: calc(8px + 4.72222vmin);
+	--spacer-large: calc(8px + 8.888vmin);
+	--spacer: calc(8px + 4.444vmin);
+	--spacer-small: calc(8px + 2.222vmin);
 
 	background-color: var(--color-dark-special);
+	font-family: var(--font-roboto);
 	font-size: 16px;
 }
+
+
 
 
 
 /*#region ==> Typography */
 .typo-nav-item {
   font-family: var(--font-roboto);
-	font-size: 1.125rem;
+	font-size: 18px;
 	text-transform: uppercase;
   font-weight: 500;
   line-height: 1;
-	letter-spacing: 0.0625rem;
+	letter-spacing: 1px;
 }
 .typo-heading-overline {
   font-family: var(--font-roboto);
-	font-size: 1.5rem;
+	font-size: 24px;
 	text-transform: uppercase;
   font-weight: 500;
   line-height: 1.33333;
-  letter-spacing: 0.0625rem;
+  letter-spacing: 1px;
 }
-.typo-heading-times {
+.typo-masthead-times {
 	font-family: var(--font-times);
-  font-size: 3.4375rem;
+  font-size: 55px;
   font-weight: bold;
   line-height: 1.45;
 	color: var(--color-light);
 	margin: 0;
 }
-.typo-heading-masthead {
+.typo-masthead-heading {
   font-family: var(--font-roboto);
   font-size: 55px;
   font-weight: 300;
@@ -59,12 +62,18 @@
 	font-size: 77px;
 	line-height: 80px;
 	font-weight: 300;
+	margin: 0;
 }
 .typo-body {
 	font-family: var(--font-roboto);
 	font-size: 24px;
 	line-height: 32px;
 	font-weight: 300;
+}
+.typo-gyrotonic-logo {
+	font-family: var(--font-times);
+	font-weight: bold;
+	text-transform: uppercase;
 }
 .typo-color-light {
 	color: var(--color-light);
@@ -87,12 +96,14 @@ a:active {
 }
 /*#endregion ==> Typography */
 
+
+
+
+
 /*#region ==> UI Components */
 .pane {
 	width: 100vw;
-
 	display: flex;
-	flex-flow: column nowrap;
 }
 
 .button {
@@ -117,11 +128,12 @@ a:active {
 		background-color: var(--color-navy);
 	}
 
-
 #button-masthead {
 	margin-top: 28px;
 }
 /*#endregion ==> UI Components */
+
+
 
 
 
@@ -141,7 +153,7 @@ header {
 		align-content: center;
 	}
 		#logo-wrapper {
-			margin-right: calc( var(--spacer)*2 );
+			margin-right: var(--spacer-large);
 			min-height: 104px;
 		}
 			#img-logo {
@@ -159,8 +171,8 @@ header {
 			align-content: center;
 		}
 			.nav-item {
-				margin-left: calc(var(--spacer)/2);
-				margin-right: calc(var(--spacer)/2);
+				margin-left: var(--spacer-small);
+				margin-right: var(--spacer-small);
 				white-space: nowrap;
 
 				display: flex;
@@ -179,6 +191,10 @@ header {
 			}
 /*#endregion ==> Page Header */
 
+
+
+
+
 /*#region ==> Masthead */
 #pane-masthead {
 	height: calc( 90vh - 205px ); /* Pane height + fixed height of header */
@@ -196,11 +212,15 @@ header {
 	}
 /*#endregion ==> Masthead*/
 
+
+
+
+
 /*#region ==> Backround Video */
 #background-video-wrapper {
 	position: absolute;
 	z-index: -1;
-	height: 100vh;
+	height: 90vh;
 	width: 100%;
 	top: 0;
 	background-color: var(--color-dark-standard);
@@ -213,21 +233,31 @@ header {
 	}
 /*#endregion ==> Background Video */
 
-/*#region ==> Description */
-#pane-description {
+
+
+
+
+/*#region ==> Landing */
+#pane-landing {
 	background-color: var(--color-light);
 	display: flex;
 	flex-flow: column nowrap;
-	padding-top: 120px;
-  padding-right: 105px;
-  padding-left: 50px;
-  padding-bottom: 60px;
+	padding-top: var(--spacer-large);
+  padding-right: var(--spacer-large);
+  padding-left: var(--spacer);
+  padding-bottom: var(--spacer-large);
 }
-#pane-description > .typo-heading {
-	margin-top: calc( var(--spacer)*2);
+#landing-heading {
 	margin-bottom: var(--spacer);
 }
-/*#endregion ==> Description */
+#landing-text {
+	max-width: 900px;
+}
+/*#endregion ==> Landing */
+
+
+
+
 
 /*#region ==> Footer */
 footer {
@@ -235,14 +265,24 @@ footer {
 	text-align: center;
 	padding: var(--spacer);
 }
-	address {
-		margin: var(--spacer-small) auto;
+	#wrapper-footer-phone-number {
+		margin-top: 0;
+		margin-bottom: var(--spacer-small);
+		font-size: 24px;
 		font-style: normal;
 	}
-	[role="contentinfo"] * {
-		margin: var(--spacer-small) auto;
+	#footer-copyright {
+		font-size: 24px;
+		margin-bottom: var(--spacer-small);
+	}
+	#footer-brand-terms {
+		font-size: 18px;
+		font-weight: 100;
+		margin-bottom: 0;
 	}
 /*#endregion ==> Footer */
+
+
 
 
 
@@ -253,7 +293,7 @@ footer {
 	}
 }
 
-@media only screen and (max-width: 775px) {
+@media only screen and (max-width: 841px) {
 	#wrapper-header-content {
 		flex-flow: column nowrap;
 		align-items: center;
@@ -267,18 +307,3 @@ footer {
 	}
 }
 /*#endregion ==> Media Queries */
-
-/*
-@media only screen and
-		(min-width: Npx),
-		(max-width: Npx),
-		(aspect-ratio: W/H),
-		(orientation: [portrait/landscape]),
-		(resolution: Ndpi),
-		(any-hover: [none/hover]),
-		(scripting: [none/initial-only/enabled])
-*/
-
-/*
-@media only speech {}
-*/
