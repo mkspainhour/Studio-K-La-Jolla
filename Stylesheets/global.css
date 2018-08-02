@@ -46,13 +46,25 @@
 	color: var(--color-light);
 	margin: 0;
 }
-.typo-heading {
+.typo-heading-masthead {
   font-family: var(--font-roboto);
-  font-size: 77px;
+  font-size: 55px;
   font-weight: 300;
-  line-height: 1.04;
+  line-height: 1.6875;
 	color: var(--color-dark-special);
 	margin: 0;
+}
+.typo-heading {
+	font-family: var(--font-roboto);
+	font-size: 77px;
+	line-height: 80px;
+	font-weight: 300;
+}
+.typo-body {
+	font-family: var(--font-roboto);
+	font-size: 24px;
+	line-height: 32px;
+	font-weight: 300;
 }
 .typo-color-light {
 	color: var(--color-light);
@@ -87,14 +99,15 @@ a:active {
 	display: inline-block;
 	min-height: 48px;
 	min-width: 48px;
-	padding: 1.125rem 1.5625rem;
+	padding: 18px 24px;
 	border-radius: 8px;
 	cursor: pointer;
 	
   font-family: var(--font-roboto);
-	font-size: 1rem;
+	font-size: 16px;
+	line-height: 20px;
 	text-transform: uppercase;
-  letter-spacing: 0.03125rem;
+  letter-spacing: 1px;
   color: var(--color-dark-special);
 }
 	.button-light {
@@ -106,7 +119,7 @@ a:active {
 
 
 #button-masthead {
-	margin-top: var(--spacer-small);
+	margin-top: 28px;
 }
 /*#endregion ==> UI Components */
 
@@ -205,6 +218,10 @@ header {
 	background-color: var(--color-light);
 	display: flex;
 	flex-flow: column nowrap;
+	padding-top: 120px;
+  padding-right: 105px;
+  padding-left: 50px;
+  padding-bottom: 60px;
 }
 #pane-description > .typo-heading {
 	margin-top: calc( var(--spacer)*2);
