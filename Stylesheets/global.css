@@ -10,9 +10,9 @@
 	--font-roboto: "Roboto", sans-serif;
 	--font-times: "TimesNewRomanPSMT", "Times New Roman", "Times-Roman", "Times Roman", sans-serif;
 
-	--spacer-large: calc(8px + 8.888vmin);
-	--spacer: calc(8px + 4.444vmin);
-	--spacer-small: calc(8px + 2.222vmin);
+	--spacer-large: calc(8px + 15.8vmin);
+	--spacer: calc(8px + 7.9vmin);
+	--spacer-small: calc(8px + 3.95vmin);
 
 	background-color: var(--color-dark-special);
 	font-family: var(--font-roboto);
@@ -65,6 +65,7 @@
 }
 .typo-body {
 	font-family: var(--font-roboto);
+	color: var(--color-dark-body);
 	font-size: 24px;
 	line-height: 32px;
 	font-weight: 300;
@@ -260,7 +261,7 @@ header {
 
 /*#region ==> Footer */
 footer {
-	background-color: var(--color-dark-special);
+	background-color: var(--color-dark);
 	text-align: center;
 	padding: var(--spacer);
 }
@@ -276,6 +277,7 @@ footer {
 	}
 	#footer-brand-terms {
 		font-size: 18px;
+		line-height: 1.111;
 		font-weight: 100;
 		margin-bottom: 0;
 	}
