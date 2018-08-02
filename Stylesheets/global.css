@@ -1,12 +1,11 @@
 
 :root {
 	--color-navy: #005587;
-	--color-dark-standard: #231f20;
-	--color-dark-special: #1d1e1f;
+	--color-dark: #1d1e1f;
+	--color-dark-body: #231f20;
 	--color-light: #ffffff;
 	--color-field-border: #75787b;
 	--color-brushstroke: #dadbdc;
-	--color-video-overlay: hsla(202, 100%, 26%, 0.3);
 
 	--font-roboto: "Roboto", sans-serif;
 	--font-times: "TimesNewRomanPSMT", "Times New Roman", "Times-Roman", "Times Roman", sans-serif;
