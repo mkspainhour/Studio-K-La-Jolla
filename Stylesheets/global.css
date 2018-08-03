@@ -44,7 +44,7 @@
 	font-family: var(--font-times);
   font-size: 55px;
   font-weight: bold;
-  line-height: 1.45;
+  line-height: 1.45454;
 	color: var(--color-light);
 	margin: 0;
 }
@@ -52,7 +52,7 @@
   font-family: var(--font-roboto);
   font-size: 55px;
   font-weight: 300;
-  line-height: 1.6875;
+  line-height: 1.45454;
 	color: var(--color-dark-special);
 	margin: 0;
 }
@@ -149,7 +149,7 @@ header {
 		display: flex;
 		flex-flow: row wrap;
 		justify-content: space-between;
-		align-items: center;
+		align-items: flex-start;
 		align-content: center;
 	}
 		#logo-wrapper {
@@ -208,7 +208,7 @@ header {
 	#wrapper-masthead-content {
 		width: 100%;
 		max-width: 1018px;
-		margin-bottom: 7.5vh;
+		margin-bottom: var(--spacer-small);
 	}
 /*#endregion ==> Masthead*/
 
@@ -251,7 +251,6 @@ header {
 	margin-bottom: var(--spacer);
 }
 #landing-text {
-	max-width: 900px;
 }
 /*#endregion ==> Landing */
 
