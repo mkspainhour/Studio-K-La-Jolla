@@ -1,58 +1,109 @@
-/*
-AUTHORS LOG:
-Transitioning old.css code to global.css while rebuilding the site mobile-first.
-*/
-
 :root {
 	--color-navy: hsl(202, 100%, 26%);
 	--color-dark: hsl(210, 3%, 12%);
 	--color-light: hsl(0, 0%, 100%);
-	--color-background: var(--color-dark);
+	--color-background: var(--color-light);
 
 	--font-times: "TimesNewRomanPSMT", "Times New Roman", "Times-Roman", "Times Roman", serif;
 
-	--spacer-large: calc(8px + 10vmin);
-	--spacer: calc(8px + 5vmin);
-	--spacer-small: calc(8px + 2.5vmin);
+	--spacer-large: calc(8px + 10vw);
+	--spacer: calc(8px + 5vw);
+	--spacer-small: calc(8px + 2.5vw);
 
-	--pane-masthead-height: 90vh;
-
-
+	--masthead-pane-height: 90vh;
 
 	font-family: "Roboto", "SF UI Text", "Helvetica Neue", "Helvetica", sans-serif;
 	font-size: 16px;
 	color: var(--color-dark);
 	background-color: var(--color-background);
+	text-rendering: optimizeLegibility;
 }
-a, a:link, a:hover, a:active, a:visited {
+main {
+	margin: var(--spacer-small);
+	min-width: 236px;
+}
+
+
+
+.typo-nav {
+	font-size: 14px;
+	text-transform: uppercase;
+  font-weight: 700;
+  line-height: 1;
+	letter-spacing: 0.5px;
+	text-shadow: 0 1px 2px hsla(0, 0%, 0%, 0.2),
+							 0 1px 3px hsla(0, 0%, 0%, 0.1);
+}
+.typo-heading-overline {
+	font-size: 14px;
+	text-transform: uppercase;
+  font-weight: 500;
+  line-height: 1.14286;
+	letter-spacing: 0.5px;
+	
+	margin: 0;
+	margin-bottom: 0.57143em; /* The equivalent of 8px at font-size 14px */
+}
+.typo-heading {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.16666;
+	
+	margin: 0;
+	margin-bottom: 0.66666em; /* The equivalent of 16px at font-size 24px */
+}
+.typo-button-label {
+	font-size: 14px;
+	text-transform: uppercase;
+	font-weight: 400;
+	line-height: 1;
+	letter-spacing: 0.05357em; /* The equivalent of 0.75px at font-size 14px */
+	white-space: nowrap;
+	opacity: 0.9;
+}
+.typo-standard {
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 1.25;
+	letter-spacing: 0.5px;
+}
+.typo-gyrotonic-logo {
+	font-family: var(--font-times);
+	font-weight: bold;
+	text-transform: uppercase;
+}
+.typo-color-light {
+	color: var(--color-light);
+}
+.typo-color-dark { 
+	color: var(--color-dark);
+}
+
+
+
+a,
+a:link,
+a:hover,
+a:active,
+a:visited {
 	text-decoration: none;
 	color: inherit;
 }
 
 
 
-.pane {
-	width: 100vw;
-	display: flex;
-}
-
-
-
 .button {
-	display: inline-block;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+
 	min-height: 48px;
 	min-width: 48px;
 	padding: 16px 24px;
 	border-radius: 8px;
 	cursor: pointer;
-
-	font-family: var(--font-roboto);
-	font-size: 16px;
-	line-height: 16px;
-	white-space: nowrap;
-	text-transform: uppercase;
-	font-weight: 500;
-  letter-spacing: 1px;
 }
 .button-light {
 	color: var(--color-dark);
@@ -69,13 +120,15 @@ a, a:link, a:hover, a:active, a:visited {
 
 
 
+/*  Background Video */
 #background-video-wrapper {
 	position: absolute;
-	z-index: -1;
-	height: var(--pane-masthead-height);
 	top: 0;
 	left: 0;
 	right: 0;
+
+	z-index: -1;
+	height: var(--masthead-pane-height);
 	background-color: var(--color-background);
 	overflow: hidden;
 }
@@ -88,45 +141,31 @@ a, a:link, a:hover, a:active, a:visited {
 
 
 
-#pane-masthead {
-	height: var(--pane-masthead-height);
-	flex-flow: column nowrap;
-	justify-content: flex-start;
-	align-content: flex-start;
-	align-items: stretch;
-}
-#masthead-content-wrapper {
-	flex-grow: 1;
-	display: flex;
-	justify-content: center;
-	flex-flow: column nowrap;
-	justify-content: center;
-	align-content: stretch;
-	align-items: flex-start;
-	padding: 0 var(--spacer);
-}
-#masthead-content-button {
-	margin-top: var(--spacer-small);
-}
-
+/* Header, Logo, & Navigation */
 header {
-  width: 100%;
-  padding: var(--spacer);
-  
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
 	align-content: center;
-}
 
-#logo-image {
 	width: 100%;
-  max-width: 304px;
-  max-height: 114px;
-	vertical-align: middle;
+	z-index: 1;
 }
-
+#wrapper-logo {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+}
+#logo-image {
+	min-width: 165px;
+	width: 100%;
+	max-width: 276px;
+	height: auto;
+	max-height: 100px;
+}
 nav {		
 	display: flex;
 	flex-flow: row nowrap;
@@ -134,14 +173,12 @@ nav {
 	align-items: center;
 	align-content: center;
 
-	position: relative;
 	min-height: 48px;
-	/* top: -16px; TODO Account for tap-target bound margins*/
 }
 .nav-item-wrapper {
-	margin-left: var(--spacer);
+	margin-left: var(--spacer-small);
 }
-.nav-item-wrapper:first-of-type { margin-left:  var(--spacer-large); }
+.nav-item-wrapper:first-of-type { margin-left:  var(--spacer); }
 .nav-item-wrapper:last-of-type  { margin-right: 0; }
 .nav-item { 
 	display: flex;
@@ -158,18 +195,56 @@ nav {
 
 
 
+.pane {
+	width: 100%;
+	display: flex;
+	flex-flow: column nowrap;
+}
 
 
-@media only screen and (max-width: 854px) {
+.brushstroke-wrapper {}
+.brushstroke {}
+
+
+
+#pane-masthead {
+	height: calc( var(--masthead-pane-height) - var(--spacer-small) );
+	justify-content: flex-start;
+	align-content: flex-start;
+	align-items: stretch;
+}
+#masthead-content-wrapper {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-content: stretch;
+	align-items: flex-start;
+	flex-grow: 1;
+}
+
+
+
+#pane-welcome {
+	padding-top: var(--spacer-large);
+	padding-bottom: var(--spacer);	
+}
+
+
+
+
+
+
+/* Header adaptations for small-width screens */
+@media only screen and (max-width: 613px) {
 	header {
 		flex-flow: column nowrap;
 		align-items: center;
 	}
 	#wrapper-logo {
+		width: 70%;
 		margin-right: 0;
 	}
 	nav {
-		margin-top: var(--spacer-small);
 		justify-content: center;
 	}
 	.nav-item-wrapper:first-of-type {
