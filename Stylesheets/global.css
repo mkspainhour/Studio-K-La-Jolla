@@ -1,309 +1,178 @@
+/*
+AUTHORS LOG:
+Transitioning old.css code to global.css while rebuilding the site mobile-first.
+*/
 
 :root {
-	--color-navy: #005587;
-	--color-dark: #1d1e1f;
-	--color-dark-body: #231f20;
-	--color-light: #ffffff;
-	--color-field-border: #75787b;
-	--color-brushstroke: #dadbdc;
+	--color-navy: hsl(202, 100%, 26%);
+	--color-dark: hsl(210, 3%, 12%);
+	--color-light: hsl(0, 0%, 100%);
+	--color-background: var(--color-dark);
 
-	--font-roboto: "Roboto", sans-serif;
-	--font-times: "TimesNewRomanPSMT", "Times New Roman", "Times-Roman", "Times Roman", sans-serif;
+	--font-times: "TimesNewRomanPSMT", "Times New Roman", "Times-Roman", "Times Roman", serif;
 
-	--spacer-large: calc(8px + 15.8vmin);
-	--spacer: calc(8px + 7.9vmin);
-	--spacer-small: calc(8px + 3.95vmin);
+	--spacer-large: calc(8px + 10vmin);
+	--spacer: calc(8px + 5vmin);
+	--spacer-small: calc(8px + 2.5vmin);
 
-	background-color: var(--color-dark-special);
-	font-family: var(--font-roboto);
+	--pane-masthead-height: 90vh;
+
+
+
+	font-family: "Roboto", "SF UI Text", "Helvetica Neue", "Helvetica", sans-serif;
 	font-size: 16px;
+	color: var(--color-dark);
+	background-color: var(--color-background);
 }
-
-
-
-
-
-/*#region ==> Typography */
-.typo-nav-item {
-  font-family: var(--font-roboto);
-	font-size: 18px;
-	text-transform: uppercase;
-  font-weight: 500;
-  line-height: 1;
-	letter-spacing: 1px;
-}
-.typo-heading-overline {
-  font-family: var(--font-roboto);
-	font-size: 24px;
-	text-transform: uppercase;
-  font-weight: 500;
-  line-height: 1.33333;
-  letter-spacing: 1px;
-}
-.typo-masthead-times {
-	font-family: var(--font-times);
-  font-size: 55px;
-  font-weight: bold;
-  line-height: 1.45454;
-	color: var(--color-light);
-	margin: 0;
-}
-.typo-masthead-heading {
-  font-family: var(--font-roboto);
-  font-size: 55px;
-  font-weight: 300;
-  line-height: 1.45454;
-	color: var(--color-dark-special);
-	margin: 0;
-}
-.typo-heading {
-	font-family: var(--font-roboto);
-	font-size: 77px;
-	line-height: 80px;
-	font-weight: 300;
-	margin: 0;
-}
-.typo-body {
-	font-family: var(--font-roboto);
-	color: var(--color-dark-body);
-	font-size: 24px;
-	line-height: 32px;
-	font-weight: 300;
-}
-.typo-gyrotonic-logo {
-	font-family: var(--font-times);
-	font-weight: bold;
-	text-transform: uppercase;
-}
-.typo-color-light {
-	color: var(--color-light);
-}
-.typo-color-dark {
-	color: var(--color-dark-standard);
-}
-a:link {
-	color: inherit;
+a, a:link, a:hover, a:active, a:visited {
 	text-decoration: none;
-}
-a:visited {
 	color: inherit;
 }
-a:hover {
-	color: inherit;
-}
-a:active {
-	color: inherit;
-}
-/*#endregion ==> Typography */
 
 
 
-
-
-/*#region ==> UI Components */
 .pane {
 	width: 100vw;
 	display: flex;
 }
 
+
+
 .button {
 	display: inline-block;
 	min-height: 48px;
 	min-width: 48px;
-	padding: 18px 24px;
+	padding: 16px 24px;
 	border-radius: 8px;
 	cursor: pointer;
-	
-  font-family: var(--font-roboto);
+
+	font-family: var(--font-roboto);
 	font-size: 16px;
-	line-height: 20px;
+	line-height: 16px;
+	white-space: nowrap;
 	text-transform: uppercase;
+	font-weight: 500;
   letter-spacing: 1px;
-  color: var(--color-dark-special);
 }
-	.button-light {
-		background-color: var(--color-light);
-	}
-	.button-dark {
-		background-color: var(--color-navy);
-	}
-
-#button-masthead {
-	margin-top: 28px;
+.button-light {
+	color: var(--color-dark);
+	background-color: var(--color-light);
+	box-shadow: 0 1px 2px hsla(0, 0%, 0%, 0.2),
+							0 1px 3px hsla(0, 0%, 0%, 0.1);
 }
-/*#endregion ==> UI Components */
-
-
-
-
-
-/*#region ==> Page Header */
-header {
-	width: 100%;
-	height: 205px;
+.button-dark {
+	color: var(--color-light);
+	background-color: var(--color-navy);
+	box-shadow: 0 1px 2px hsla(202, 100%, 53%, 0.2),
+							0 1px 3px hsla(0, 0%, 0%, 0.1);
 }
-	#wrapper-header-content {
-		width: 100%;
-		padding: var(--spacer);
-		
-		display: flex;
-		flex-flow: row wrap;
-		justify-content: space-between;
-		align-items: flex-start;
-		align-content: center;
-	}
-		#logo-wrapper {
-			margin-right: var(--spacer-large);
-			min-height: 104px;
-		}
-			#img-logo {
-				min-width: 276px;
-				width: 100%;
-				max-width: 300px;
-				max-height: 104px;
-				vertical-align: middle;
-			}
-		nav {		
-			display: flex;
-			flex-flow: row nowrap;
-			justify-content: flex-end;
-			align-items: center;
-			align-content: center;
-		}
-			.nav-item {
-				margin-left: var(--spacer-small);
-				margin-right: var(--spacer-small);
-				white-space: nowrap;
-
-				display: flex;
-				flex-flow: column nowrap;
-				justify-content: center;
-				align-items: center;
-				align-content: center;
-				min-height: 48px;
-				min-width: 48px;
-			}
-			.nav-item:first-of-type {
-				margin-left: 0;
-			}
-			.nav-item:last-of-type {
-				margin-right: 0;
-			}
-/*#endregion ==> Page Header */
 
 
 
-
-
-/*#region ==> Masthead */
-#pane-masthead {
-	height: calc( 90vh - 205px ); /* Pane height + fixed height of header */
-	padding: var(--spacer);
-
-	display: flex;
-	flex-flow: column nowrap;
-	justify-content: flex-end;
-	align-items: center;
-}
-	#wrapper-masthead-content {
-		width: 100%;
-		max-width: 1018px;
-		margin-bottom: var(--spacer-small);
-	}
-/*#endregion ==> Masthead*/
-
-
-
-
-
-/*#region ==> Backround Video */
 #background-video-wrapper {
 	position: absolute;
 	z-index: -1;
-	height: 90vh;
-	width: 100%;
+	height: var(--pane-masthead-height);
 	top: 0;
-	background-color: var(--color-dark-standard);
+	left: 0;
+	right: 0;
+	background-color: var(--color-background);
+	overflow: hidden;
 }
-	#background-video {
-		object-fit: cover;
-		/*TODO: set object-position property */
-		width: 100%;
-		height: 100%;
-	}
-/*#endregion ==> Background Video */
+#background-video {
+	object-fit: cover;
+	object-position: top center;
+	width: 100%;
+	height: 100%;
+}
 
 
 
+#pane-masthead {
+	height: var(--pane-masthead-height);
+	flex-flow: column nowrap;
+	justify-content: flex-start;
+	align-content: flex-start;
+	align-items: stretch;
+}
+#masthead-content-wrapper {
+	flex-grow: 1;
+	display: flex;
+	justify-content: center;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-content: stretch;
+	align-items: flex-start;
+	padding: 0 var(--spacer);
+}
+#masthead-content-button {
+	margin-top: var(--spacer-small);
+}
 
+header {
+  width: 100%;
+  padding: var(--spacer);
+  
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+	align-content: center;
+}
 
-/*#region ==> Landing */
-#pane-landing {
-	background-color: var(--color-light);
+#logo-image {
+	width: 100%;
+  max-width: 304px;
+  max-height: 114px;
+	vertical-align: middle;
+}
+
+nav {		
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: flex-end;
+	align-items: center;
+	align-content: center;
+
+	position: relative;
+	min-height: 48px;
+	/* top: -16px; TODO Account for tap-target bound margins*/
+}
+.nav-item-wrapper {
+	margin-left: var(--spacer);
+}
+.nav-item-wrapper:first-of-type { margin-left:  var(--spacer-large); }
+.nav-item-wrapper:last-of-type  { margin-right: 0; }
+.nav-item { 
 	display: flex;
 	flex-flow: column nowrap;
-	padding-top: var(--spacer-large);
-  padding-right: var(--spacer-large);
-  padding-left: var(--spacer);
-  padding-bottom: var(--spacer-large);
-}
-#landing-heading {
-	margin-bottom: var(--spacer);
-}
-#landing-text {
-}
-/*#endregion ==> Landing */
+	justify-content: center;
+	align-items: center;
+	align-content: stretch;
 
-
-
-
-
-/*#region ==> Footer */
-footer {
-	background-color: var(--color-dark);
-	text-align: center;
-	padding: var(--spacer);
-}
-	#wrapper-footer-phone-number {
-		margin-top: 0;
-		margin-bottom: var(--spacer-small);
-		font-size: 24px;
-		font-style: normal;
-	}
-	#footer-copyright {
-		font-size: 24px;
-		margin-bottom: var(--spacer-small);
-	}
-	#footer-brand-terms {
-		font-size: 18px;
-		line-height: 1.111;
-		font-weight: 100;
-		margin-bottom: 0;
-	}
-/*#endregion ==> Footer */
-
-
-
-
-
-/*#region ==> Media Queries */
-@media only screen and (max-width: 360px) {
-	.nav-item {
-		font-size: 1rem;
-	}
+	min-height: 48px;
+	min-width: 48px;
+	white-space: nowrap;
+	cursor: pointer;
 }
 
-@media only screen and (max-width: 841px) {
-	#wrapper-header-content {
+
+
+
+
+@media only screen and (max-width: 854px) {
+	header {
 		flex-flow: column nowrap;
 		align-items: center;
 	}
-	#logo-wrapper {
+	#wrapper-logo {
 		margin-right: 0;
 	}
 	nav {
-		margin-top: var(--spacer);
+		margin-top: var(--spacer-small);
 		justify-content: center;
 	}
+	.nav-item-wrapper:first-of-type {
+		margin-left: 0;
+	}
 }
-/*#endregion ==> Media Queries */
