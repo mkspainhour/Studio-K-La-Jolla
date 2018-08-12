@@ -13,7 +13,7 @@
 	--masthead-pane-height: 90vh;
 
 	font-family: "Roboto", "SF UI Text", "Helvetica Neue", "Helvetica", sans-serif;
-	font-size: 16px;
+	font-size: 14px;
 	color: var(--color-dark);
 	background-color: var(--color-background);
 	text-rendering: optimizeLegibility;
@@ -22,7 +22,6 @@ main {
 	margin: var(--spacer-small);
 	min-width: 236px;
 }
-
 
 
 .typo-nav {
@@ -55,7 +54,7 @@ main {
 .typo-button-label {
 	font-size: 14px;
 	text-transform: uppercase;
-	font-weight: 400;
+	font-weight: 300;
 	line-height: 1;
 	letter-spacing: 0.05357em; /* The equivalent of 0.75px at font-size 14px */
 	white-space: nowrap;
@@ -66,6 +65,33 @@ main {
 	font-weight: 300;
 	line-height: 1.25;
 	letter-spacing: 0.5px;
+}
+.typo-small {
+	font-size: 14px;
+	line-height: 1.42857;
+	font-weight: 300;
+	letter-spacing: 0.25px;
+}
+.typo-testimonial {
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 1.25;
+	letter-spacing: 0.5px;
+	font-style: italic;
+}
+.typo-testimonial::before { content: "\""; }
+.typo-testimonial::after { content: "\""; }
+.typo-testimonial-attribution {
+	font-size: 16px;
+	font-weight: 300;
+	letter-spacing: 0.5px;
+	line-height: 20px;
+	color: var(--color-navy);
+
+	margin-top: var(--spacer-small);
+}
+.typo-testimonial-attribution::before {
+	content: "—";
 }
 .typo-gyrotonic-logo {
 	font-family: var(--font-times);
@@ -102,7 +128,7 @@ a:visited {
 	min-height: 48px;
 	min-width: 48px;
 	padding: 16px 24px;
-	border-radius: 8px;
+	border-radius: 6px;
 	cursor: pointer;
 }
 .button-light {
@@ -202,8 +228,40 @@ nav {
 }
 
 
-.brushstroke-wrapper {}
-.brushstroke {}
+.card {
+	box-shadow: 0 1px 2px 0 rgba(0,0,0,0.20),
+							0 1px 3px 0 rgba(0,0,0,0.10);
+	border-radius: 6px;
+}
+
+
+
+input,
+textarea {
+	border: none;
+	border-radius: 6px;
+	min-width: 48px;
+	width: 100%;
+	min-height: 48px;
+	padding: 1em;
+	box-shadow: inset 0 1px 2px 0 rgba(0,0,0,0.20),
+							inset 0 1px 3px 0 rgba(0,0,0,0.10);
+	margin-top: 4px;
+	margin-bottom: 1rem;
+
+	letter-spacing: 0.5px;
+	font-weight: 300;
+}
+input::placeholder,
+textarea::placeholder {
+	color: inherit;
+	opacity: 0.6;
+}
+
+
+#content {
+	max-width: 70ch;
+}
 
 
 
@@ -225,12 +283,55 @@ nav {
 
 
 #pane-welcome {
-	padding-top: var(--spacer-large);
-	padding-bottom: var(--spacer);	
+	margin: var(--spacer-large) 0;
 }
 
 
 
+#pane-contact {
+	margin: var(--spacer-large) 0;
+}
+#contact-text-wrapper {
+	margin-bottom: var(--spacer-small);
+}
+#form-contact-message {
+	resize: none;
+}
+
+
+
+#pane-location {
+	margin: var(--spacer-large) 0;
+}
+#map {
+	width: 100%;
+
+	min-height: 50vh;
+	height: 100%;
+	max-height: 75vh;
+
+	margin-bottom: var(--spacer-small);
+}
+
+
+
+#pane-testimonials {
+	margin: var(--spacer-large) 0;
+}
+#testimonials-wrapper {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: flex-start;
+	align-content: flex-start;
+	align-items: center;
+}
+#testimonials-chevron {
+	margin-left: var(--spacer-small);
+}
+#testimonials-card {
+	flex-grow: 1;
+	padding: var(--spacer-small);
+}
 
 
 

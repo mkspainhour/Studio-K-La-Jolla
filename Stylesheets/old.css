@@ -1,24 +1,4 @@
-.typo-small {
-	font-family: var(--font-roboto);
-	font-size: 20px;
-	line-height: 24px;
-	font-weight: 300;
-}
-.typo-testimonial {
-	font-family: var(--font-roboto);
-	font-size: 48px;
-	line-height: 56px;
-	font-style: italic;
-	opacity: 0.5;
-}
-.typo-testimonial-attribution {
-	font-family: var(--font-roboto);
-	font-size: 24px;
-	line-height: 32px;
-	letter-spacing: 1px;
 
-	color: var(--color-navy);
-}
 
 
 

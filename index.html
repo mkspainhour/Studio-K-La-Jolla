@@ -10,17 +10,14 @@
 
 	<!--STYLESHEETS-->
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700,900" rel="stylesheet"> <!--TODO: Eliminate unnecessary weights-->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700" rel="stylesheet"> <!--TODO: Eliminate unnecessary weights-->
 	<link href="Stylesheets/resets.css" rel="stylesheet">
 	<link href="Stylesheets/global.css" rel="stylesheet">
 
 	<!--TODO Favicons-->
 </head>
 
-	<body><main role="main">
-		
-
-
+	<body>
 		<div id="background-video-wrapper">
 			<video id="background-video"
 				autoplay loop muted
@@ -28,59 +25,97 @@
 				src="Resources/Video/background-video.mp4">
 			</video>
 		</div>
+		
+		<main role="main">
+			<section id="pane-masthead" role="region" class="pane typo-color-light">
+				<header>
+					<a id="wrapper-logo" href="index.html">
+						<img id="logo-image" src="Resources/Brand/logo-full-white-shadow.png" alt="Studio K La Jolla, Logo" aria-label="Studio K La Hoya, Logo">
+					</a>
+					<nav hidden role="navigation" class="typo-color-light">
+						<h3 class="nav-item-wrapper typo-nav"><a class="nav-item" href="index.html">Home</a></h3>
+						<h3 class="nav-item-wrapper typo-nav"><a class="nav-item" href="#">Services</a></h3>
+						<h3 class="nav-item-wrapper typo-nav"><a class="nav-item" href="#">About Kurt</a></h3>
+					</nav>
+				</header>
+				<div id="masthead-content-wrapper" class="typo-color-light">
+					<h1 class="typo-heading-overline" id="masthead-overline">Specializing In</h1>
+					<h2 class="typo-heading" aria-labelledby="masthead-overline">Pilates<br><span class="typo-gyrotonic-logo">GYROTONIC®</span> Method<br>Massage Therapy</h2>
+					<a id="masthead-content-button" class="button button-light" href="#"><span class="typo-button-label typo-color-dark">Learn More</span></a>
+				</div>
+			</section>
+			
+			<section id="pane-welcome" class="pane" role="region">
+				<h2 class="typo-heading">Welcome to Studio K</h1>
+				<p class="typo-standard">Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+			</section>
 
-		<section id="pane-masthead" role="region" class="pane typo-color-light">
-			<header>
-				<a id="wrapper-logo" href="index.html">
-					<img id="logo-image" src="Resources/Brand/logo-full-white-shadow.png" alt="Studio K La Jolla, Logo" aria-label="Studio K La Hoya, Logo">
-				</a>
-				<nav hidden role="navigation" class="typo-color-light">
-					<h3 class="nav-item-wrapper typo-nav"><a class="nav-item" href="index.html">Home</a></h3>
-					<h3 class="nav-item-wrapper typo-nav"><a class="nav-item" href="#">Services</a></h3>
-					<h3 class="nav-item-wrapper typo-nav"><a class="nav-item" href="#">About Kurt</a></h3>
-				</nav>
-			</header>
+			<img class="brushstroke" src="Resources/Icons/brushstroke.svg" alt="horizontal separator, brushtroke">
 
-			<div id="masthead-content-wrapper" class="typo-color-light">
-				<h1 class="typo-heading-overline" id="masthead-overline">Specializing In</h1>
+			<section id="pane-contact" class="pane" role="region">
+				<div id="contact-text-wrapper">
+					<h2 class="typo-heading">Contact Me</h2>
+					<p class="typo-standard">Ipsum dolor sit amet, consectetur adipiscing elit, nos do eiusmod tempor incididunt ut labore configularum et dolore magna consequat.</p>
+				</div>
 
-				<h2 class="typo-heading" aria-labelledby="masthead-overline">Pilates<br><span class="typo-gyrotonic-logo">GYROTONIC®</span> Method<br>Massage Therapy</h2>
+				<form id="form-contact">
+					<h4 class="typo-small">Name</h4>
+					<input id="form-contact-name" class="typo-standard" type="text" placeholder="Kurt K." required>
+
+					<h4 class="typo-small">Email Address</h4>
+					<input id="form-contact-email"  class="typo-standard" type="email" placeholder="address@mail.service" required>
+
+					<h4 class="typo-small">Phone Number</h4>
+					<input id="form-contact-phone-number"  class="typo-standard" type="text" placeholder="(858) 123–4567">
+
+					<h4 class="typo-small">Message</h4>
+					<textarea id="form-contact-message"  class="typo-standard" rows="6" placeholder="I am interested in..." required></textarea>
+
+					<button id="form-contact-submit" type="submit" form="form-contact" class="button button-dark">
+						<span class="typo-button-label">Send Message</span>
+					</button>
+				</form>
+			</section>
+
+			<img class="brushstroke" src="Resources/Icons/brushstroke.svg" alt="horizontal separator, brushtroke">
+
+			<section id="pane-location" class="pane" role="region">
+				<iframe id="map" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDBqzbm16j0qmeTGKEAJ-x3kozU86EMAJk&q=Studio+K+La+Jolla&zoom=14"></iframe>
+				<div id="location-address">
+					<h2 class="typo-heading">Studio</h2>
+					<p class="typo-standard">Fitness Studios<br>1234 Any St., Suite A<br>La Jolla, CA  92037</p>
+				</div>
+			</section>
+
+			<img class="brushstroke" src="Resources/Icons/brushstroke.svg" alt="horizontal separator, brushtroke">
+
+			<section id="pane-testimonials" class="pane" role="region">
+				<h2 class="typo-heading">Testimonials</h2>
 				
-				<a id="masthead-content-button" class="button button-light" href="#"><span class="typo-button-label typo-color-dark">Learn More</span></a>
-			</div>
-		</section>
+				<div id="testimonials-wrapper">
+					<div id="testimonials-card" class="card">
+						<p class="typo-testimonial" aria-live="polite">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas faucibus mollis interdum. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+						<p class="typo-testimonial-attribution">Grady Booch</p>
+					</div>
+					
+					<img id="testimonials-chevron" src="Resources/Icons/chevron-right.svg" alt="next testimonial button">
+				</div>
+			</section>
 
+			<footer class="typo-color-light">
+				<address id="wrapper-footer-phone-number">
+					<a id="footer-phone-number" class="phone-number" aria-label="phone pumber" href="tel:555-555-5555">555-555-5555</a> TODO: Insert real phone number
+				</address>
+				<div role="contentinfo">
+					<p id="footer-copyright"aria-label="copyright">© 2018 Kurt Kikuchi-Lopez</p>
+					<p id="footer-brand-terms" class="typo-standard typo-color-light" aria-label="gyrotonic brand attribution"><a class="typo-gyrotonic-logo" target="_blank" href="https://www.gyrotonic.com/about/gyrotonic-method/">Gyrotonic<sup>®</sup></a> is a registered trademark of Gyrotonic Sales Corp. and is used with their permission.</p>
+				</div>
+			</footer>
+		</main>
 
+	</body>
 
-
-
-		<section id="pane-welcome" class="pane" role="region">
-			<h2 class="typo-heading">Welcome to Studio K</h1>
-			<p class="typo-standard">Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
-		</section>
-
-
-
-
-		
-		<!-- <img class="brushstroke" src="Resources/Brand/brushstroke-small.png" alt="separator"> -->
-
-
-
-		<!--<footer class="typo-color-light">
-			<address id="wrapper-footer-phone-number">
-				<a id="footer-phone-number" class="phone-number" aria-label="phone pumber" href="tel:555-555-5555">555-555-5555</a> TODO: Insert real phone number
-			</address>
-			<div role="contentinfo">
-				<p id="footer-copyright"aria-label="copyright">© 2018 Kurt Kikuchi-Lopez</p>
-				<p id="footer-brand-terms" class="typo-standard typo-color-light" aria-label="gyrotonic brand attribution"><a class="typo-gyrotonic-logo" target="_blank" href="https://www.gyrotonic.com/about/gyrotonic-method/">Gyrotonic<sup>®</sup></a> is a registered trademark of Gyrotonic Sales Corp. and is used with their permission.</p>
-			</div>
-		</footer>-->
-		
-
-
-
-
-	</main></body>
-
+	<!--Scripts-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="app.js"></script>
 </html>
