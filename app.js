@@ -4,11 +4,15 @@ const ui = {
 
 
 
-$(configureEventListeners);
+$(entryPoint);
+
+function entryPoint() {
+  configureEventListeners();
+}
 
 function configureEventListeners() {
   ui.$form_contact.on("submit", function(event) {
     event.preventDefault();
-    //Button clicked behavior...
+    console.log("Form submit triggered.");
   });
 }

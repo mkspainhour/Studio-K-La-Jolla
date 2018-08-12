@@ -6,9 +6,9 @@
 
 	--font-times: "TimesNewRomanPSMT", "Times New Roman", "Times-Roman", "Times Roman", serif;
 
-	--spacer-large: calc(8px + 10vw);
-	--spacer: calc(8px + 5vw);
-	--spacer-small: calc(8px + 2.5vw);
+	--spacer-large: calc(8px + 10vmin);
+	--spacer: calc(8px + 5vmin);
+	--spacer-small: calc(8px + 2.5vmin);
 
 	--masthead-pane-height: 90vh;
 
@@ -19,8 +19,7 @@
 	text-rendering: optimizeLegibility;
 }
 main {
-	margin: var(--spacer-small);
-	min-width: 236px;
+	padding: var(--spacer-small);
 }
 
 
@@ -79,8 +78,6 @@ main {
 	letter-spacing: 0.5px;
 	font-style: italic;
 }
-.typo-testimonial::before { content: "\""; }
-.typo-testimonial::after { content: "\""; }
 .typo-testimonial-attribution {
 	font-size: 16px;
 	font-weight: 300;
@@ -90,9 +87,9 @@ main {
 
 	margin-top: var(--spacer-small);
 }
-.typo-testimonial-attribution::before {
-	content: "—";
-}
+	.typo-testimonial-attribution::before {
+		content: "—";
+	}
 .typo-gyrotonic-logo {
 	font-family: var(--font-times);
 	font-weight: bold;
@@ -118,6 +115,37 @@ a:visited {
 
 
 
+#background-video-wrapper {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+
+	z-index: -1;
+	height: var(--masthead-pane-height);
+	background-color: var(--color-background);
+	overflow: hidden;
+}
+#background-video {
+	object-fit: cover;
+	object-position: top center;
+	width: 100%;
+	height: 100%;
+}
+
+
+
+.pane {
+	width: 100%;
+	display: flex;
+	flex-flow: column nowrap;
+}
+.card {
+	box-shadow: 0 1px 2px 0 rgba(0,0,0,0.20),
+							0 1px 3px 0 rgba(0,0,0,0.10);
+	border-radius: 6px;
+	overflow: hidden;
+}
 .button {
 	display: flex;
 	flex-flow: row nowrap;
@@ -146,28 +174,12 @@ a:visited {
 
 
 
-/*  Background Video */
-#background-video-wrapper {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-
-	z-index: -1;
-	height: var(--masthead-pane-height);
-	background-color: var(--color-background);
-	overflow: hidden;
+#pane-masthead {
+	height: calc( var(--masthead-pane-height) - var(--spacer-small) );
+	justify-content: flex-start;
+	align-content: flex-start;
+	align-items: stretch;
 }
-#background-video {
-	object-fit: cover;
-	object-position: top center;
-	width: 100%;
-	height: 100%;
-}
-
-
-
-/* Header, Logo, & Navigation */
 header {
   display: flex;
   flex-flow: row wrap;
@@ -218,59 +230,6 @@ nav {
 	white-space: nowrap;
 	cursor: pointer;
 }
-
-
-
-.pane {
-	width: 100%;
-	display: flex;
-	flex-flow: column nowrap;
-}
-
-
-.card {
-	box-shadow: 0 1px 2px 0 rgba(0,0,0,0.20),
-							0 1px 3px 0 rgba(0,0,0,0.10);
-	border-radius: 6px;
-}
-
-
-
-input,
-textarea {
-	border: none;
-	border-radius: 6px;
-	min-width: 48px;
-	width: 100%;
-	min-height: 48px;
-	padding: 1em;
-	box-shadow: inset 0 1px 2px 0 rgba(0,0,0,0.20),
-							inset 0 1px 3px 0 rgba(0,0,0,0.10);
-	margin-top: 4px;
-	margin-bottom: 1rem;
-
-	letter-spacing: 0.5px;
-	font-weight: 300;
-}
-input::placeholder,
-textarea::placeholder {
-	color: inherit;
-	opacity: 0.6;
-}
-
-
-#content {
-	max-width: 70ch;
-}
-
-
-
-#pane-masthead {
-	height: calc( var(--masthead-pane-height) - var(--spacer-small) );
-	justify-content: flex-start;
-	align-content: flex-start;
-	align-items: stretch;
-}
 #masthead-content-wrapper {
 	display: flex;
 	flex-flow: column nowrap;
@@ -278,6 +237,13 @@ textarea::placeholder {
 	align-content: stretch;
 	align-items: flex-start;
 	flex-grow: 1;
+}
+
+
+
+#site-body-content-wrapper {
+	max-width: 60ch;
+	margin: 0 auto;
 }
 
 
@@ -297,20 +263,42 @@ textarea::placeholder {
 #form-contact-message {
 	resize: none;
 }
+#form-contact > input,
+#form-contact > textarea {
+	border: none;
+	border-radius: 6px;
+	min-width: 48px;
+	width: 100%;
+	min-height: 48px;
+	padding: 1em;
+	box-shadow: inset 0 1px 2px 0 rgba(0,0,0,0.20),
+							inset 0 1px 3px 0 rgba(0,0,0,0.10);
+	margin-top: 4px;
+	margin-bottom: 1rem;
+
+	letter-spacing: 0.5px;
+	font-weight: 300;
+}
+#form-contact > input::placeholder,
+#form-contact > textarea::placeholder {
+	color: inherit;
+	opacity: 0.5;
+}
 
 
 
 #pane-location {
 	margin: var(--spacer-large) 0;
 }
+#map-wrapper {
+	margin-bottom: var(--spacer-small);
+}
 #map {
 	width: 100%;
 
 	min-height: 50vh;
 	height: 100%;
-	max-height: 75vh;
-
-	margin-bottom: var(--spacer-small);
+	display: block;
 }
 
 
@@ -331,6 +319,24 @@ textarea::placeholder {
 #testimonials-card {
 	flex-grow: 1;
 	padding: var(--spacer-small);
+}
+
+
+
+footer {
+	background-color: var(--color-dark);
+	text-align: center;
+	padding: var(--spacer-small);
+}
+#footer-phone-number-wrapper {
+	margin-bottom: 1em;
+}
+#footer-phone-number {
+	font-style: normal;
+	font-weight: 400;
+}
+#footer-copyright {
+	margin-bottom: 1em;
 }
 
 
