@@ -11,9 +11,10 @@
 	--spacer-small: calc(8px + 2.5vw);
 
 	--masthead-pane-height: 90vh;
+	--masthead-font-size: 0.875rem;
 
 	font-family: "Roboto", "SF UI Text", "Helvetica Neue", "Helvetica", sans-serif;
-	font-size: 14px;
+	font-size: 16px;
 	color: var(--color-dark);
 	background-color: var(--color-background);
 }
@@ -23,26 +24,26 @@ main {
 
 
 .typo-nav {
-	font-size: 14px;
+	font-size: 0.875rem;
 	text-transform: uppercase;
   font-weight: 700;
   line-height: 1;
-	letter-spacing: 0.5px;
+	letter-spacing: 0.03571em;
 	text-shadow: 0 1px 2px hsla(0, 0%, 0%, 0.2),
 							 0 1px 3px hsla(0, 0%, 0%, 0.1);
 }
 .typo-heading-overline {
-	font-size: 14px;
+	font-size: 0.875rem;
 	text-transform: uppercase;
   font-weight: 500;
   line-height: 1.14286;
-	letter-spacing: 0.5px;
+	letter-spacing: 0.03571em;
 	
 	margin: 0;
 	margin-bottom: 0.57143em; /* The equivalent of 8px at font-size 14px */
 }
 .typo-heading {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 300;
   line-height: 1.16666;
 	
@@ -51,7 +52,7 @@ main {
 	max-width: 62ch;
 }
 .typo-button-label {
-	font-size: 14px;
+	font-size: 0.875rem;
 	text-transform: uppercase;
 	font-weight: 300;
 	line-height: 1;
@@ -60,38 +61,38 @@ main {
 	opacity: 0.9;
 }
 .typo-standard {
-	font-size: 16px;
+	font-size: 1rem;
 	font-weight: 300;
 	line-height: 1.25;
-	letter-spacing: 0.5px;
+	letter-spacing: 0.03125em;
 	max-width: 62ch;
 }
 .typo-small {
-	font-size: 14px;
+	font-size: 0.875rem;
 	line-height: 1.42857;
 	font-weight: 300;
-	letter-spacing: 0.25px;
+	letter-spacing: 0.01786em;
 	max-width: 53ch;
 }
 .typo-form-field {
-	font-size: 16px;
+	font-size: 1rem;
 	font-weight: 300;
 	line-height: 1.25;
-	letter-spacing: 0.5px;
+	letter-spacing: 0.03125em;
 }
 .typo-testimonial {
-	font-size: 16px;
+	font-size: 1rem;
 	font-weight: 300;
 	line-height: 1.25;
-	letter-spacing: 0.5px;
+	letter-spacing: 0.03125em;
 	font-style: italic;
 	max-width: 62ch;
 }
 .typo-testimonial-attribution {
-	font-size: 16px;
+	font-size: 1rem;
 	font-weight: 300;
-	letter-spacing: 0.5px;
-	line-height: 20px;
+	letter-spacing: 0.03125em;
+	line-height: 1.25;
 	color: var(--color-navy);
 
 	margin-top: var(--spacer-small);
@@ -183,12 +184,6 @@ a:visited {
 }
 
 
-.brushstroke {
-	display: block;
-	align-self: flex-start;
-}
-
-
 
 #pane-masthead {
 	min-height: 349px;
@@ -252,13 +247,19 @@ nav {
 	align-items: flex-start;
 	flex-grow: 1;
 	margin-top: var(--spacer-small);
-	margin-bottom: var(--spacer-small):
+	margin-bottom: var(--spacer-small);
+}
+#masthead-overline {
+	font-size: var(--masthead-font-size);
+}
+#masthead-headings {
+	font-size: calc( var(--masthead-font-size)*1.71429);
 }
 
 
 
 #site-body-content-wrapper {
-	max-width: 960px;
+	max-width: 1108px;
 	margin: 0 auto;
 	display: flex;
 	flex-flow: column nowrap;
@@ -274,16 +275,18 @@ nav {
 
 
 #pane-contact {
-	margin: var(--spacer-large) 0;
+	margin-bottom: var(--spacer-large);
 	flex-flow: row wrap;
 }
 #contact-text-wrapper {
-	width: 40ch;
+	max-width: 40ch;
+	margin-right: var(--spacer)
+}
+#contact-text-brushstroke {
+	margin-bottom: var(--spacer);
 }
 #form-contact {
-	min-width: 40ch;
 	flex-grow: 1;
-	margin-left: var(--spacer);
 }
 #form-contact > input,
 #form-contact > textarea {
@@ -376,7 +379,7 @@ footer {
 
 
 
-/* Header adaptations for small-width screens */
+/* Header adaptations ending at 613px */
 @media only screen and (max-width: 613px) {
 	header {
 		flex-flow: column nowrap;
@@ -393,21 +396,35 @@ footer {
 		margin-left: 0;
 	}
 }
-/* Contact form adaptations for small-width screens */
-@media only screen and (max-width: 727px) {
-	#pane-contact {
-		flex-flow: column nowrap;
-	}
-	#contact-text-wrapper {
-		margin-bottom: var(--spacer);
-	}
-	#form-contact {
-		margin-left: 0;
-		min-width: unset;
+
+@media only screen and (min-width: 613px) {
+	:root {
+		--masthead-font-size: 1rem;
 	}
 }
-/* Location pane adaptations for large-width screens */
-@media only screen and (min-width: 727px) {
+
+/* Contact form adaptations ending at 828px */
+@media only screen and (max-width: 828px) {
+	#pane-contact {
+		flex-flow: column nowrap;
+		width: unset;
+	}
+	#contact-text-wrapper {
+		max-width: 40ch;
+		margin-bottom: var(--spacer);
+		margin-right: 0;
+	}
+	#contact-text-brushstroke {
+		margin-bottom: var(--spacer-large);
+		display: flex;
+	}
+	#form-contact {
+		max-width: 62ch;
+	}
+}
+
+/* Adaptations starting at 700px */
+@media only screen and (min-width: 700px) {
 	#pane-location {
 		flex-flow: row wrap;
 	}
@@ -417,5 +434,37 @@ footer {
 	#location-address {
 		margin-right: var(--spacer);
 		margin-left: var(--spacer);
+	}
+}
+
+/* Adaptations starting at 1280px */
+@media only screen and (min-width: 1280px) {
+	:root {
+		font-size: 18px;
+		--masthead-font-size: 1.25rem;
+	}
+}
+
+/* Adaptations starting at 1440px */
+@media only screen and (min-width: 1440px) {
+	:root {
+		font-size: 20px;
+		--spacer-large: calc(8px + 8vw);
+		--spacer: calc(8px + 4vw);
+		--spacer-small: calc(8px + 2vw);
+		--masthead-font-size: 1.5rem;
+	}
+	#contact-text-wrapper {
+		margin-bottom: var(--spacer);
+	}
+}
+
+/* Adaptations starting at 1920px */
+@media only screen and (min-width: 1920px) {
+	:root {
+		font-size: 22px;
+		--spacer-large: calc(8px + 6vw);
+		--spacer: calc(8px + 3vw);
+		--spacer-small: calc(8px + 1.5vw);
 	}
 }
