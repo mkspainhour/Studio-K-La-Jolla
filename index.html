@@ -70,13 +70,16 @@
 						<input type="text" name="Sender's Name" id="form-contact-name" class="typo-form-field" placeholder="Kurt K." required>
 
 						<h4 class="typo-small">Email Address</h4>
-						<input type="email" name="Return Email Address" id="form-contact-email" class="typo-form-field" placeholder="address@mail.service" required>
+						<input type="email" name="email" id="form-contact-email" class="typo-form-field" placeholder="address@email.service" required>
 
 						<h4 class="typo-small">Phone Number</h4>
 						<input type="tel" name="Phone Number" id="form-contact-phone-number" class="typo-form-field" placeholder="(858) 123–4567">
 
 						<h4 class="typo-small">Message</h4>
 						<textarea name="Message" id="form-contact-message" class="typo-form-field" rows="6" placeholder="I am interested in..." required></textarea>
+
+							<!--Hidden Formspree Fields--> <!--TODO-->
+							<!--<input type="hidden" name="_cc" value="another@email.com,yetanother@email.com"/>-->
 
 						<button id="form-contact-submit" type="submit" value="Send" form="form-contact" class="button button-dark">
 							<span class="typo-button-label">Send Message</span>
