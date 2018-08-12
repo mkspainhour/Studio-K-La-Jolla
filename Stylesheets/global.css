@@ -162,18 +162,17 @@ a:visited {
 	border-radius: 6px;
 	cursor: pointer;
 	border: 0;
+
+	box-shadow: 0 1px 2px hsla(0, 0%, 0%, 0.2),
+							0 1px 3px hsla(0, 0%, 0%, 0.1);
 }
 .button-light {
 	color: var(--color-dark);
 	background-color: var(--color-light);
-	box-shadow: 0 1px 2px hsla(0, 0%, 0%, 0.2),
-							0 1px 3px hsla(0, 0%, 0%, 0.1);
 }
 .button-dark {
 	color: var(--color-light);
 	background-color: var(--color-navy);
-	box-shadow: 0 1px 2px hsla(202, 100%, 53%, 0.2),
-							0 1px 3px hsla(0, 0%, 0%, 0.1);
 }
 
 
