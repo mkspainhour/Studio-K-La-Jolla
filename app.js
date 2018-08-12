@@ -12,7 +12,6 @@ function entryPoint() {
 
 function configureEventListeners() {
   ui.$form_contact.on("submit", function(event) {
-    event.preventDefault();
     console.log("Form submit triggered.");
   });
 }

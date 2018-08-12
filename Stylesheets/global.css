@@ -183,6 +183,12 @@ a:visited {
 }
 
 
+.brushstroke {
+	display: block;
+	align-self: flex-start;
+}
+
+
 
 #pane-masthead {
 	min-height: 349px;
@@ -254,6 +260,9 @@ nav {
 #site-body-content-wrapper {
 	max-width: 960px;
 	margin: 0 auto;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
 }
 
 
@@ -314,9 +323,8 @@ nav {
 	margin-bottom: var(--spacer-small);
 }
 #map {
-	width: 100%;
-
-	min-height: 50vh;
+	width: 100.1%;
+	min-height: 40vh;
 	height: 100%;
 	display: block;
 }
@@ -324,7 +332,9 @@ nav {
 
 
 #pane-testimonials {
-	margin: var(--spacer-large) 0;
+	margin: var(--spacer-large) auto;
+	display: inline-block;
+	width: unset;
 }
 #testimonials-wrapper {
 	display: flex;
@@ -332,13 +342,15 @@ nav {
 	justify-content: flex-start;
 	align-content: flex-start;
 	align-items: center;
+	max-width: 63ch;
+}
+#testimonials-card {
+	display: inline;
+	flex-grow: 1;
+	padding: var(--spacer-small);
 }
 #testimonials-chevron {
 	margin-left: var(--spacer-small);
-}
-#testimonials-card {
-	flex-grow: 1;
-	padding: var(--spacer-small);
 }
 
 
