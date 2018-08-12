@@ -6,9 +6,9 @@
 
 	--font-times: "TimesNewRomanPSMT", "Times New Roman", "Times-Roman", "Times Roman", serif;
 
-	--spacer-large: calc(8px + 10vmin);
-	--spacer: calc(8px + 5vmin);
-	--spacer-small: calc(8px + 2.5vmin);
+	--spacer-large: calc(8px + 10vw);
+	--spacer: calc(8px + 5vw);
+	--spacer-small: calc(8px + 2.5vw);
 
 	--masthead-pane-height: 90vh;
 
@@ -73,6 +73,12 @@ main {
 	letter-spacing: 0.25px;
 	max-width: 53ch;
 }
+.typo-form-field {
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 1.25;
+	letter-spacing: 0.5px;
+}
 .typo-testimonial {
 	font-size: 16px;
 	font-weight: 300;
@@ -125,6 +131,7 @@ a:visited {
 	right: 0;
 
 	z-index: -1;
+	min-height: calc( 349px + var(--spacer-small)*2);
 	height: var(--masthead-pane-height);
 	background-color: var(--color-background);
 	overflow: hidden;
@@ -178,6 +185,7 @@ a:visited {
 
 
 #pane-masthead {
+	min-height: 349px;
 	height: calc( var(--masthead-pane-height) - var(--spacer-small) );
 	justify-content: flex-start;
 	align-content: flex-start;
@@ -201,11 +209,8 @@ header {
 	align-items: center;
 }
 #logo-image {
-	min-width: 165px;
-	width: 100%;
 	max-width: 276px;
-	height: auto;
-	max-height: 100px;
+	max-height: 25vh;
 }
 nav {		
 	display: flex;
@@ -240,6 +245,8 @@ nav {
 	align-content: stretch;
 	align-items: flex-start;
 	flex-grow: 1;
+	margin-top: var(--spacer-small);
+	margin-bottom: var(--spacer-small):
 }
 
 
@@ -259,12 +266,15 @@ nav {
 
 #pane-contact {
 	margin: var(--spacer-large) 0;
+	flex-flow: row wrap;
 }
 #contact-text-wrapper {
-	margin-bottom: var(--spacer-small);
+	width: 40ch;
 }
-#form-contact-message {
-	resize: none;
+#form-contact {
+	min-width: 40ch;
+	flex-grow: 1;
+	margin-left: var(--spacer);
 }
 #form-contact > input,
 #form-contact > textarea {
@@ -290,6 +300,9 @@ nav {
 #form-contact > textarea::placeholder {
 	color: inherit;
 	opacity: 0.5;
+}
+#form-contact-message {
+	resize: none;
 }
 
 
@@ -345,6 +358,9 @@ footer {
 #footer-copyright {
 	margin-bottom: 1em;
 }
+#footer-legal-wrapper {
+	display: inline-block;
+}
 
 
 
@@ -363,5 +379,31 @@ footer {
 	}
 	.nav-item-wrapper:first-of-type {
 		margin-left: 0;
+	}
+}
+/* Contact form adaptations for small-width screens */
+@media only screen and (max-width: 727px) {
+	#pane-contact {
+		flex-flow: column nowrap;
+	}
+	#contact-text-wrapper {
+		margin-bottom: var(--spacer);
+	}
+	#form-contact {
+		margin-left: 0;
+		min-width: unset;
+	}
+}
+/* Location pane adaptations for large-width screens */
+@media only screen and (min-width: 727px) {
+	#pane-location {
+		flex-flow: row wrap;
+	}
+	#map-wrapper {
+		flex-grow: 1;
+	}
+	#location-address {
+		margin-right: var(--spacer);
+		margin-left: var(--spacer);
 	}
 }
