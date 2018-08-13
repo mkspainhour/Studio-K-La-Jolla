@@ -1,7 +1,7 @@
 :root {
-	--color-navy: hsl(202, 100%, 26%);
-	--color-dark: hsl(210, 3%, 12%);
-	--color-light: hsl(0, 0%, 100%);
+	--color-navy: #005384;
+	--color-dark: #1d1e1f;
+	--color-light: #ffffff;
 	--color-background: var(--color-light);
 
 	--font-times: "TimesNewRomanPSMT", "Times New Roman", "Times-Roman", "Times Roman", serif;

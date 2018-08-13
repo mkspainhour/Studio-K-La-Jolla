@@ -1,6 +1,7 @@
 
 // TODO: Make sure the marquee testimonials are hard-coded into the HTML as a <noscript> fallback.
-// TODO: Set testimonial wrapper 
+// TODO: Set testimonial wrapper height to fit the largest testimonial at largest width breakpoint.
+// TODO: Set testimonials.
 
 let testimonialCollection = [
   {
