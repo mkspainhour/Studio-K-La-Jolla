@@ -442,11 +442,12 @@ footer > *:not(:last-child) {
 /* Adaptations starting at 700px */
 @media only screen and (min-width: 700px) {
 	#pane-location {
-		flex-flow: row wrap;
+		flex-flow: row nowrap;
 	}
 	#location-address {
 		margin-right: var(--spacer);
 		margin-left: var(--spacer);
+		white-space: nowrap;
 	}
 }
 
