@@ -1,32 +1,37 @@
+
+let testimonialCollection = [
+  {
+    testimonial: "Nice.",
+    attribution: "Jackston Kirkmichael, Customer"
+  },
+  {
+    testimonial: "Very nice.",
+    attribution: "Coolio, Musician"
+  },
+  {
+    testimonial: "It's going to have to be a yes from me, dawg.",
+    attribution: "Randy Jackson, Bassist"
+  }
+];
+
 const ui = {
-  $form_contact: $("#form-contact"),
+  currentTestimonial: 0,
+
   $button_nextTestimonial: $("#testimonials-chevron"),
-  $card_testimonials: $("#testimonials-card"),
-  $wrapper_testimonialsCardContent: $("#testimonials-card-content"),
-  $text_testimonial: $("#testimonial-text"),
-  $text_testimonialAttribution: $("#testimonial-attribution")
+  $card_testimonials: $("#testimonials-card")
 }
 
 
 
-$(entryPoint);
-
-function entryPoint() {
-  configureEventListeners();
-}
+$(configureEventListeners);
 
 function configureEventListeners() {
-  ui.$form_contact.on("submit", function() {
-    console.log("Form submit triggered.");
-  });
   ui.$button_nextTestimonial.on("click", function(event) {
-    //showNextTestimonial();
+    showNextTestimonial();
   });
 }
 
-let currentTestimonial = 1;
 function showNextTestimonial() {
-  ui.$card_testimonials.css("min-width", ui.$card_testimonials.outerWidth())
-  ui.$card_testimonials.css("min-height", ui.$card_testimonials.outerHeight());
-  ui.$card_testimonials.children().fadeOut(500);
+  console.log("Showing next testimonial...");
+  //Functionality goes here...
 }

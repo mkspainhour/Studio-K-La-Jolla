@@ -34,8 +34,11 @@ a:visited {
 	display: flex;
 	flex-flow: column nowrap;
 }
-	#site-body-content-wrapper > .pane {
+	#site-body-wrapper > .pane {
 		margin: var(--spacer-large) auto;
+	}
+	#site-body-wrapper > .pane:first-of-type {
+		margin-bottom: 0;
 	}
 .card {
 	box-shadow: 0 1px 2px 0 rgba(0,0,0,0.20),
@@ -261,7 +264,7 @@ nav {
 }
 /*#endregion => MASTHEAD */
 
-#site-body-content-wrapper {
+#site-body-wrapper {
 	max-width: 1108px;
 	margin: 0 auto;
 	display: flex;
@@ -340,7 +343,7 @@ nav {
 #testimonials-card {
 	padding: var(--spacer-small);
 }
-#testimonials-chevron { /*TODO Increase chevron at size in larger viewports */
+#testimonials-chevron { /*TODO Increase chevron size in larger viewports */
 	margin-left: var(--spacer-small);
 }
 .testimonial:not(:last-of-type) {
