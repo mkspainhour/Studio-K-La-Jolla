@@ -100,25 +100,52 @@
 
 				<img src="Resources/Icons/brushstroke.svg" alt="horizontal separator, brushtroke">
 
+
+
+
+
+
 				<section id="pane-testimonials" class="pane" role="region">
+					<noscript><style>
+						#testimonials-chevron {
+							display: none;
+						}
+						.testimonial {
+							margin-bottom: var(--spacer);
+						}
+						.testimonial:last-of-type {
+							margin-bottom: 0;
+						}
+					</style></noscript>
+
 					<h2 class="typo-heading">Testimonials</h2>
 					
 					<div id="testimonials-wrapper">
-						<div id="testimonials-card" class="card">
-							<p class="typo-testimonial" aria-live="polite">"Cras justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas faucibus mollis interdum. Nullam id dolor id nibh ultricies vehicula ut id elit."</p>
-							<p class="typo-testimonial-attribution">Allan, Fit Person</p>
+						<div id="testimonials-card" class="card" aria-live="polite">
+							<div id="testimonial-1" class="testimonial">
+								<p id="testimonial-text" class="typo-testimonial">"Cras justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas faucibus mollis interdum. Nullam id dolor id nibh ultricies vehicula ut id elit."</p>
+								<p id="testimonial-attribution" class="typo-testimonial-attribution">Allan, Fit Person</p>
+							</div>
+							<div id="testimonial-2" class="testimonial">
+								<p id="testimonial-text" class="typo-testimonial">"Brut justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas faucibus mollis interdum. Nullam id dolor id nibh ultricies vehicula ut id elit. Nonquento justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas faucibus mollis interdum. Nullam id dolor id nibh ultricies vehicula ut id elit."</p>
+								<p id="testimonial-attribution" class="typo-testimonial-attribution">Susan, Fit Person</p>
+							</div>
+							<div id="testimonial-3" class="testimonial">
+								<p id="testimonial-text" class="typo-testimonial">"Nonquento justo odio, dapibus ac facilisis in, egestas eget quam."</p>
+								<p id="testimonial-attribution" class="typo-testimonial-attribution">Tricia, Fit Person</p>
+							</div>
 						</div>
 						
-						<noscript>
-							<style>
-								#testimonials-chevron {
-									display: none;
-								}
-							</style>
-						</noscript>
-						<img id="testimonials-chevron" src="Resources/Icons/chevron-right.svg" alt="next testimonial button">
+						
+						<img hidden id="testimonials-chevron" src="Resources/Icons/chevron-right.svg" alt="next testimonial button">
 					</div>
 				</section>
+
+
+
+
+
+
 			</div>
 		</main>
 		

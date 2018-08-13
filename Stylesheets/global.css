@@ -95,7 +95,7 @@ main {
 	line-height: 1.25;
 	color: var(--color-navy);
 
-	margin-top: var(--spacer-small);
+	margin-top: 1em;
 }
 	.typo-testimonial-attribution::before {
 		content: "—"; /* em dash */
@@ -345,15 +345,18 @@ nav {
 	justify-content: flex-start;
 	align-content: flex-start;
 	align-items: center;
-	max-width: 63ch;
 }
 #testimonials-card {
 	display: inline;
 	flex-grow: 1;
 	padding: var(--spacer-small);
+	max-width: 700px;
 }
 #testimonials-chevron {
 	margin-left: var(--spacer-small);
+}
+.testimonial {
+	margin-bottom: var(--spacer);
 }
 
 
@@ -437,11 +440,18 @@ footer {
 	}
 }
 
+/* Adaptations starting at 768px */
+@media only screen and (min-width: 768px) {
+	:root {
+		--masthead-font-size: 1.2rem;
+	}
+}
+
 /* Adaptations starting at 1280px */
 @media only screen and (min-width: 1280px) {
 	:root {
 		font-size: 18px;
-		--masthead-font-size: 1.25rem;
+		--masthead-font-size: 1.35rem;
 	}
 }
 
