@@ -1,10 +1,6 @@
 <!DOCTYPE HTML>
 <html lang="en-US">
 
-<!--TODO: Add <noscript> that disables testimonials chevron-->
-<!--TODO: Adapt text sizes to screen sizes-->
-<!--TODO: Align the masthead content with the body content-->
-
 
 <head>
 	<meta charset="UTF-8">
@@ -100,27 +96,19 @@
 
 				<img src="Resources/Icons/brushstroke.svg" alt="horizontal separator, brushtroke">
 
-
-
-
-
-
 				<section id="pane-testimonials" class="pane" role="region">
 					<noscript><style>
 						#testimonials-chevron {
 							display: none;
 						}
-						.testimonial {
+						.testimonial:not(:last-of-type) {
 							margin-bottom: var(--spacer);
-						}
-						.testimonial:last-of-type {
-							margin-bottom: 0;
 						}
 					</style></noscript>
 
 					<h2 class="typo-heading">Testimonials</h2>
 					
-					<div id="testimonials-wrapper">
+					<div id="testimonials-carousel-wrapper">
 						<div id="testimonials-card" class="card" aria-live="polite">
 							<div id="testimonial-1" class="testimonial">
 								<p id="testimonial-text" class="typo-testimonial">"Cras justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas faucibus mollis interdum. Nullam id dolor id nibh ultricies vehicula ut id elit."</p>
@@ -137,26 +125,18 @@
 						</div>
 						
 						
-						<img hidden id="testimonials-chevron" src="Resources/Icons/chevron-right.svg" alt="next testimonial button">
+						<img id="testimonials-chevron" src="Resources/Icons/chevron-right.svg" alt="next testimonial button">
 					</div>
 				</section>
-
-
-
-
-
-
 			</div>
 		</main>
 		
-		<footer class="typo-color-light">
+		<footer class="typo-color-light" role="contentinfo">
 			<address id="footer-phone-number-wrapper">
 				<a id="footer-phone-number" class="typo-standard" aria-label="phone number" href="tel:555-555-5555">555–555–5555</a>
 			</address> <!--TODO-->
-			<div id="footer-legal-wrapper" role="contentinfo">
-				<p id="footer-copyright" class="typo-small" aria-label="copyright">© 2018 Kurt Kikuchi-Lopez</p>
-				<p id="footer-brand-attributions" class="typo-small" aria-label="gyrotonic brand attribution"><a class="typo-gyrotonic-logo" target="_blank" href="https://www.gyrotonic.com/about/gyrotonic-method/">Gyrotonic<sup>®</sup></a> is a registered trademark of Gyrotonic Sales Corp. and is used with their permission.</p>
-			</div>
+			<p id="footer-copyright" class="typo-small" aria-label="copyright">© 2018 Kurt Kikuchi-Lopez</p>
+			<p id="footer-brand-attributions" class="typo-small" aria-label="gyrotonic brand attribution"><a class="typo-gyrotonic-logo" target="_blank" href="https://www.gyrotonic.com/about/gyrotonic-method/">Gyrotonic<sup>®</sup></a> is a registered trademark of Gyrotonic Sales Corp. and is used with their permission.</p>
 		</footer>
 	</body>
 
