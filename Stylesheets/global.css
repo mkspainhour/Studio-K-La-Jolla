@@ -314,14 +314,10 @@ nav {
 /*#endregion => CONTACT */
 
 /*#region => LOCATION */
-#map-wrapper {
-	margin-bottom: var(--spacer-small);
-}
 #map {
-	width: 100%;
 	min-height: 40vh;
-	height: 100%;
 	display: block;
+	margin-bottom: var(--spacer-small);
 }
 /*#endregion => LOCATION */
 
@@ -433,7 +429,7 @@ footer > *:not(:last-child) {
 	#pane-location {
 		flex-flow: row wrap;
 	}
-	#map-wrapper {
+	#map {
 		flex-grow: 1;
 	}
 	#location-address {
