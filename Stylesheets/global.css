@@ -358,6 +358,9 @@ nav {
 .testimonial {
 	margin-bottom: var(--spacer);
 }
+.testimonial:last-of-type {
+	margin-bottom: 0;
+}
 
 
 
