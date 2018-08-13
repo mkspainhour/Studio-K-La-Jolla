@@ -34,18 +34,25 @@ a:visited {
 	display: flex;
 	flex-flow: column nowrap;
 }
-	#site-body-wrapper > .pane {
-		margin: var(--spacer-large) auto;
-	}
-	#site-body-wrapper > .pane:first-of-type {
-		margin-bottom: 0;
-	}
 .card {
 	box-shadow: 0 1px 2px 0 rgba(0,0,0,0.20),
 							0 1px 3px 0 rgba(0,0,0,0.10);
 	border-radius: 6px;
 	overflow: hidden;
 }
+#site-body-wrapper {
+	max-width: 1108px;
+	margin: 0 auto;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+}
+	#site-body-wrapper > .pane {
+		margin: var(--spacer-large) auto;
+	}
+	#site-body-wrapper > .pane:first-of-type {
+		margin-bottom: 0;
+	}
 
 /*#region => BUTTONS */
 .button {
@@ -166,8 +173,6 @@ a:visited {
 }
 /*#endregion => TYPOGRAPHY */
 
-
-
 /*#region => BACKGROUND-VIDEO */
 #background-video-wrapper {
 	position: absolute;
@@ -263,14 +268,6 @@ nav {
 	font-size: calc( var(--masthead-font-size)*1.71429);
 }
 /*#endregion => MASTHEAD */
-
-#site-body-wrapper {
-	max-width: 1108px;
-	margin: 0 auto;
-	display: flex;
-	flex-flow: column nowrap;
-	justify-content: center;
-}
 
 /*#region => CONTACT */
 #pane-contact {
@@ -374,8 +371,6 @@ footer > *:not(:last-child) {
 	max-width: unset;
 }
 /*#endregion => FOOTER */
-
-
 
 /*#region => MEDIA QUERIES */
 /* Header adaptations ending at 613px */
