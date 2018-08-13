@@ -444,7 +444,7 @@ footer > *:not(:last-child) {
 /* Adaptations starting at 768px */
 @media only screen and (min-width: 768px) {
 	:root {
-		--masthead-font-size: 1.2rem;
+		--masthead-font-size: 1.1rem;
 	}
 }
 
@@ -452,7 +452,7 @@ footer > *:not(:last-child) {
 @media only screen and (min-width: 1280px) {
 	:root {
 		font-size: 18px;
-		--masthead-font-size: 1.35rem;
+		--masthead-font-size: 1.2rem;
 	}
 }
 
@@ -463,7 +463,7 @@ footer > *:not(:last-child) {
 		--spacer-large: calc(8px + 8vw);
 		--spacer: calc(8px + 4vw);
 		--spacer-small: calc(8px + 2vw);
-		--masthead-font-size: 1.5rem;
+		--masthead-font-size: 1.3rem;
 	}
 	#contact-text-wrapper {
 		margin-bottom: var(--spacer);
@@ -477,6 +477,7 @@ footer > *:not(:last-child) {
 		--spacer-large: calc(8px + 6vw);
 		--spacer: calc(8px + 3vw);
 		--spacer-small: calc(8px + 1.5vw);
+		--masthead-font-size: 1.4rem;
 	}
 }
 /*#endregion => MEDIA QUERIES */
