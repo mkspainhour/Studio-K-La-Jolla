@@ -412,7 +412,6 @@ footer > *:not(:last-child) {
 @media only screen and (max-width: 828px) {
 	#pane-contact {
 		flex-flow: column nowrap;
-		width: unset;
 	}
 	#contact-text-wrapper {
 		max-width: 40ch;
