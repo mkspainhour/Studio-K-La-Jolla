@@ -321,6 +321,7 @@ nav {
 	width: 100%;
 	min-height: 40vh;
 	height: 100%;
+	display: block;
 }
 /*#endregion => LOCATION */
 
