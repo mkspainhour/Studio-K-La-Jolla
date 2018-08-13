@@ -454,6 +454,9 @@ footer > *:not(:last-child) {
 		font-size: 18px;
 		--masthead-font-size: 1.2rem;
 	}
+	#testimonials-chevron {
+		width: 36px;
+	}
 }
 
 /* Adaptations starting at 1440px */
@@ -478,6 +481,9 @@ footer > *:not(:last-child) {
 		--spacer: calc(8px + 3vw);
 		--spacer-small: calc(8px + 1.5vw);
 		--masthead-font-size: 1.4rem;
+	}
+	#testimonials-chevron {
+		width: 48px;
 	}
 }
 /*#endregion => MEDIA QUERIES */
