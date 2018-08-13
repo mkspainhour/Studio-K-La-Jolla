@@ -328,7 +328,6 @@ nav {
 #pane-testimonials {
 	margin-left: auto;
 	margin-right: auto;
-	width: auto;
 }
 #testimonials-carousel-wrapper {
 	display: flex;
@@ -337,7 +336,15 @@ nav {
 	align-items: center;
 }
 #testimonials-card {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
 	padding: var(--spacer-small);
+	width: 100%;
+	max-width: calc( 62ch + calc( var(--spacer-small)*2) );
+	min-height: 25vh;
 }
 #testimonials-chevron { /*TODO Increase chevron size in larger viewports */
 	margin-left: var(--spacer-small);
