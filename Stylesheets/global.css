@@ -146,7 +146,6 @@ a:visited {
 	line-height: 1.25;
 	letter-spacing: 0.03125em;
 	font-style: italic;
-	max-width: 62ch;
 }
 .typo-testimonial-attribution {
 	font-size: 1rem;
@@ -343,8 +342,13 @@ nav {
 #testimonials-chevron { /*TODO Increase chevron size in larger viewports */
 	margin-left: var(--spacer-small);
 }
-.testimonial:not(:last-of-type) {
-	margin-bottom: var(--spacer);
+.testimonial {
+	display: inline-block;
+	max-width: 62ch;
+}
+.testimonial:not(:first-of-type) {
+	display: none;
+	margin-top: var(--spacer);
 }
 /*#endregion => TESTIMONIALS */
 
