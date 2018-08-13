@@ -39,10 +39,10 @@ function showNextTestimonial() {
   }
   let newTestimonial = testimonialCollection[ui.currentTestimonial+1];
 
-  ui.$wrapper_testimonial.fadeOut(500, function() {
+  ui.$wrapper_testimonial.fadeOut(750, function() {
     ui.$text_testimonial.html(newTestimonial.testimonial);
     ui.$text_attribution.html(newTestimonial.attribution);
     ui.currentTestimonial++;
-    ui.$wrapper_testimonial.fadeIn(500);
+    ui.$wrapper_testimonial.fadeIn(750);
   });
 }
