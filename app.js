@@ -32,12 +32,7 @@ const ui = {
 $(entryPoint);
 
 function entryPoint() {
-  configureInitialLayout();
   configureEventListeners();
-}
-
-function configureInitialLayout() {
-
 }
 
 function configureEventListeners() {
