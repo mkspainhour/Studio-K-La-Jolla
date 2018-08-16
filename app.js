@@ -22,7 +22,7 @@ const ui = {
   $pane_contact: $("#pane-contact"),
 
   $button_nextTestimonial: $("#testimonials-chevron"),
-  $card_testimonials: $("#testimonials-card"),
+  $wrapper_testimonialsCarousel: $("#testimonials-carousel-wrapper"),
   $text_testimonial: $("#js-testimonial-text"),
   $text_attribution: $("#js-testimonial-attribution")
 }
@@ -46,11 +46,11 @@ function showNextTestimonial() {
   }
   let newTestimonial = testimonialCollection[ui.currentTestimonial+1];
 
-  ui.$card_testimonials.fadeOut(700, function() {
+  ui.$wrapper_testimonialsCarousel.fadeOut(700, function() {
     ui.$text_testimonial.html(newTestimonial.testimonial);
     ui.$text_attribution.html(newTestimonial.attribution);
     ui.currentTestimonial++;
-    ui.$card_testimonials.fadeIn(700);
+    ui.$wrapper_testimonialsCarousel.fadeIn(700);
   });
 }
 
