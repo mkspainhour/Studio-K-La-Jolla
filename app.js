@@ -1,16 +1,16 @@
 
 let testimonialCollection = [
   {
-    testimonial: `"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."`,
-    attribution: "Jackston Kirkmichael, Customer"
+    testimonial: `"I had my ACLs in both knees replaced, and my physical therapy ended, but I am a dancer and didn't feel ready to start dancing again. So, I started taking private Pilates and Gyrotonic sessions with Kurt. I began to strengthen my body in a gentle yet incredibly effective way. The results were amazing on my body and my psyche. I was able to trust my body again, and I feel stronger now than I did pre-surgery. I'm back in dance class, and feeling better than ever."`,
+    attribution: "K. Newman, Professional Dancer"
   },
   {
-    testimonial: `"Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident."`,
-    attribution: "Coolio, Musician"
+    testimonial: `"As a client of Kurt’s, I can attest that it was a most gratifying and healthful experience. His knowledge of the practices of Gyrotonic and Pilates is profound and his personal manner is delightful and professional. I cannot imagine a better or more qualified practitioner of these arts which require such skill and personality than Kurt."`,
+    attribution: "W. Wegman, Artist"
   },
   {
-    testimonial: `"Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."`,
-    attribution: "Randy Jackson, Bassist"
+    testimonial: `"As someone who has spent his life time obsessed with improving, healing, and strengthening my body and mind, Kurt is without a doubt the "trainer" I have had the most fulfilling and longest working relationship. His profound and varied knowledge base is almost secondary to his intuitive skills that begin with how to make someone feel comfortable enough to move and extends to knowing how to deeply impact bodily change. He managed to do all this in an easy going and playful manner that caused me to cherish those times in the week when we could work together. New York's loss is San Diego's gain."`,
+    attribution: "S. Ball, Ph.D."
   }
 ];
 
@@ -42,7 +42,7 @@ function configureEventListeners() {
 
 function showNextTestimonial() {
   if (ui.currentTestimonial == testimonialCollection.length-1) {
-    ui.currentTestimonial = -1; //So that it can be bumped to the first item index, 0, in the next statement.
+    ui.currentTestimonial = -1; //So that it can be bumped to the first item index (0) in the next statement.
   }
   let newTestimonial = testimonialCollection[ui.currentTestimonial+1];
 
@@ -57,7 +57,7 @@ function showNextTestimonial() {
 function jumpToContactSection() {
   $([document.documentElement, document.body]).animate(
     {
-      scrollTop: ui.$pane_contact.offset().top * 0.95
+      scrollTop: ui.$pane_contact.offset().top * 0.95 //The y-axis position of the top of the element, less 5%
     },
     1500
   );

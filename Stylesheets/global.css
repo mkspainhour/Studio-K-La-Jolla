@@ -42,7 +42,7 @@ a:visited {
 }
 #site-body-wrapper {
 	margin: 0 auto;
-	max-width: 1280px;
+	max-width: 70ch;
 	display: flex;
 	flex-flow: column nowrap;
 	justify-content: center;
@@ -287,7 +287,6 @@ nav {
 	flex-flow: row wrap;
 }
 #contact-text-wrapper {
-	max-width: 40ch;
 	margin-right: var(--spacer);
 	margin-bottom: var(--spacer);
 }
@@ -296,7 +295,6 @@ nav {
 }
 #form-contact {
 	flex-grow: 1;
-	max-width: 62ch;
 }
 #form-contact > input,
 #form-contact > textarea {
@@ -335,7 +333,7 @@ nav {
 #map {
 	display: block;
 	width: 100%;
-	height: 62vmax;
+	height: 62vh;
 }
 #location-address {
 	margin-top: 2em;
@@ -355,7 +353,7 @@ nav {
 	justify-content: center;
 	align-items: center;
 	flex-grow: 1;
-	min-height: 62vh;
+	min-height: 94vh; /* Based on longest testimonial card height */
 }
 #testimonials-card {
 	display: flex;
@@ -443,98 +441,41 @@ footer > *:not(:last-child) {
 
 /* Tablet Adaptations */
 @media only screen and (min-width: 768px) {
-	/*EMPTY*/
+	:root {
+		font-size: 20px;
+	}
+	#contact-text-wrapper {
+		max-width: unset;
+	}
+	#form-contact {
+		min-width: 40ch;
+	}
+	#testimonials-carousel-wrapper {
+		min-height: 34vh;
+	}
 }
 
 /* Small Desktop Adaptations */
 @media only screen and (min-width: 1280px) {
-	/*EMPTY*/
+	#testimonials-carousel-wrapper {
+		min-height: 48vh;
+	}
 }
 
 /* Large Desktop Adaptations */
-@media only screen and (max-width: 1920px) {
-	/*EMPTY*/
+@media only screen and (min-width: 1920px) {
+	:root {
+		font-size: 26px;
+	}
+	#site-body-wrapper > .pane {
+		margin: var(--spacer) auto;
+	}
 }
 
 /* Very Large Desktop Adaptations */
-@media only screen and (max-width: 2560px) {
-	/*EMPTY*/
+@media only screen and (min-width: 2560px) {
+	:root {
+		font-size: 32px;
+	}
 }
-
-/* Contact form adaptations ending at 828px
-@media only screen and (max-width: px) {
-	#contact-text-brushstroke {
-		margin-bottom: var(--spacer-large);
-	}
-	#form-contact {
-		min-width: unset;
-	}
-	#pane-location {
-		flex-flow: column nowrap;
-	}
-	#location-address {
-		margin-left: 0;
-	}
-	#testimonials-card {
-		min-height: 52vh;
-	}
-}  */
-
-/* Adaptations starting at 700px */
-/* @media only screen and (min-width: 700px) {
-	#pane-location {
-		flex-flow: row nowrap;
-	}
-	#location-address {
-		margin-right: var(--spacer);
-		margin-left: var(--spacer);
-		white-space: nowrap;
-	}
-} */
-
-/* Adaptations starting at 768px */
-/* @media only screen and (min-width: 768px) {
-	:root {
-		--masthead-font-size: 1.1rem;
-	}
-} */
-
-/* Adaptations starting at 1280px */
-/* @media only screen and (min-width: 1280px) {
-	:root {
-		font-size: 18px;
-		--masthead-font-size: 1.2rem;
-	}
-	#testimonials-chevron {
-		width: 36px;
-	}
-} */
-
-/* Adaptations starting at 1440px */
-/* @media only screen and (min-width: 1440px) {
-	:root {
-		font-size: 20px;
-		--spacer-large: calc(8px + 8vw);
-		--spacer: calc(8px + 4vw);
-		--spacer-small: calc(8px + 2vw);
-		--masthead-font-size: 1.3rem;
-	}
-	#contact-text-wrapper {
-		margin-bottom: var(--spacer);
-	}
-} */
-
-/* Adaptations starting at 1920px */
-/* @media only screen and (min-width: 1920px) {
-	:root {
-		font-size: 22px;
-		--spacer-large: calc(8px + 6vw);
-		--spacer: calc(8px + 3vw);
-		--spacer-small: calc(8px + 1.5vw);
-		--masthead-font-size: 1.4rem;
-	}
-	#testimonials-chevron {
-		width: 48px;
-	}
-} */
 /*#endregion => MEDIA QUERIES */
