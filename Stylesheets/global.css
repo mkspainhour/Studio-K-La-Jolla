@@ -42,7 +42,7 @@ a:visited {
 }
 #site-body-wrapper {
 	margin: 0 auto;
-	max-width: 70ch;
+	max-width: 110ch;
 	display: flex;
 	flex-flow: column nowrap;
 	justify-content: center;
@@ -165,7 +165,7 @@ a:visited {
 	text-transform: uppercase;
 }
 .typo-gyrotonic-logo.typo-color-dark { /* Darkness balancing */
-	opacity: 0.8;
+	opacity: 0.9;
 }
 .typo-color-light {
 	color: var(--color-light);
@@ -276,12 +276,6 @@ nav {
 	margin-top: var(--spacer-small);
 	margin-bottom: var(--spacer-small);
 }
-#masthead-overline {
-	font-size: var(--masthead-font-size);
-}
-#masthead-headings {
-	font-size: calc( var(--masthead-font-size)*1.71429);
-}
 /*#endregion => MASTHEAD */
 
 /*#region => CONTACT */
@@ -298,6 +292,7 @@ nav {
 }
 #form-contact {
 	flex-grow: 1;
+	max-width: 70ch;
 }
 #form-contact > input,
 #form-contact > textarea {
@@ -348,10 +343,8 @@ nav {
 
 /*#region => TESTIMONIALS */
 #pane-testimonials {
-	/* background-color: blueviolet; */
 	margin-left: auto;
 	margin-right: auto;
-	max-height: 100vh;
 	max-width: calc( 62ch + (var(--spacer-small)*2) );
 }
 #testimonials-carousel-wrapper {
@@ -449,6 +442,9 @@ footer > *:not(:last-child) {
 	:root {
 		font-size: 20px;
 	}
+	.typo-heading {
+		font-size: 2rem;
+	}
 	#contact-text-wrapper {
 		max-width: unset;
 	}
@@ -458,9 +454,22 @@ footer > *:not(:last-child) {
 }
 
 /* Small Desktop Adaptations */
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 1024px) {
 	:root {
 		font-size: 18px;
+	}
+	#contact-text-wrapper {
+		max-width: 40ch;
+	}
+	#pane-location {
+		flex-flow: row nowrap;
+	}
+	#location-address {
+		margin-top: 0;
+		margin: 0 var(--spacer);
+	}
+	#map {
+		height: 38vmax;
 	}
 }
 

@@ -47,11 +47,11 @@ function showNextTestimonial() {
   let newTestimonial = testimonialCollection[ui.currentTestimonial+1];
   console.log(newTestimonial);
 
-  ui.$card_testimonials.slideUp(700, function() {
+  ui.$card_testimonials.fadeOut(700, function() {
     ui.$text_testimonial.html(newTestimonial.testimonial);
     ui.$text_attribution.html(newTestimonial.attribution);
     ui.currentTestimonial++;
-    ui.$card_testimonials.slideDown(700);
+    ui.$card_testimonials.fadeIn(700);
   });
 }
 
