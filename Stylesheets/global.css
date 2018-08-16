@@ -457,6 +457,9 @@ footer > *:not(:last-child) {
 
 /* Small Desktop Adaptations */
 @media only screen and (min-width: 1280px) {
+	:root {
+		font-size: 18px;
+	}
 	#testimonials-carousel-wrapper {
 		min-height: 48vh;
 	}
@@ -465,7 +468,7 @@ footer > *:not(:last-child) {
 /* Large Desktop Adaptations */
 @media only screen and (min-width: 1920px) {
 	:root {
-		font-size: 26px;
+		font-size: 24px;
 	}
 	#site-body-wrapper > .pane {
 		margin: var(--spacer) auto;
@@ -475,7 +478,7 @@ footer > *:not(:last-child) {
 /* Very Large Desktop Adaptations */
 @media only screen and (min-width: 2560px) {
 	:root {
-		font-size: 32px;
+		font-size: 30px;
 	}
 }
 /*#endregion => MEDIA QUERIES */
