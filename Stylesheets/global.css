@@ -47,12 +47,6 @@ a:visited {
 	flex-flow: column nowrap;
 	justify-content: center;
 }
-	#site-body-wrapper > .pane {
-		margin: var(--spacer-large) auto;
-	}
-	#site-body-wrapper > .pane:first-of-type {
-		margin-bottom: 0;
-	}
 
 /*#region => BUTTONS */
 .button {
@@ -278,9 +272,18 @@ nav {
 }
 /*#endregion => MASTHEAD */
 
+/*#region => WELCOME */
+#pane-welcome {
+	width: auto;
+	margin: 0 auto;
+	margin-top: var(--spacer);
+}
+/*#endregion => WELCOME*/
+
 /*#region => CONTACT */
 #pane-contact {
-	margin-bottom: var(--spacer-large);
+	margin: var(--spacer-large) auto;
+	margin-bottom: var(--spacer);
 	flex-flow: row wrap;
 }
 #contact-text-wrapper {
@@ -326,6 +329,9 @@ nav {
 
 /*#region => LOCATION */
 #pane-location {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: var(--spacer);
 	flex-flow: column nowrap;
 }
 #map {
@@ -343,8 +349,8 @@ nav {
 
 /*#region => TESTIMONIALS */
 #pane-testimonials {
-	margin-left: auto;
-	margin-right: auto;
+	margin: var(--spacer-large) auto;
+	margin-bottom: var(--spacer);
 	max-width: calc( 62ch + (var(--spacer-small)*2) );
 }
 #testimonials-carousel-wrapper {
