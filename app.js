@@ -6,11 +6,11 @@ let testimonialCollection = [
     attribution: "S. Ball, Ph.D."
   },
   {
-    testimonial: `"I had my ACLs in both knees replaced, and my physical therapy ended, but I am a dancer and didn't feel ready to start dancing again. So, I started taking private Pilates and Gyrotonic sessions with Kurt. I began to strengthen my body in a gentle yet incredibly effective way. The results were amazing on my body and my psyche. I was able to trust my body again, and I feel stronger now than I did pre-surgery. I'm back in dance class, and feeling better than ever."`,
+    testimonial: `"I had my ACLs in both knees replaced, and my physical therapy ended, but I am a dancer and didn't feel ready to start dancing again. So, I started taking private Pilates and <span class="typo-gyrotonic-logo">Gyrotonic®</span> sessions with Kurt. I began to strengthen my body in a gentle yet incredibly effective way. The results were amazing on my body and my psyche. I was able to trust my body again, and I feel stronger now than I did pre-surgery. I'm back in dance class, and feeling better than ever."`,
     attribution: "K. Newman, Professional Dancer"
   },
   {
-    testimonial: `"As a client of Kurt’s, I can attest that it was a most gratifying and healthful experience. His knowledge of the practices of Gyrotonic and Pilates is profound and his personal manner is delightful and professional. I cannot imagine a better or more qualified practitioner of these arts which require such skill and personality than Kurt."`,
+    testimonial: `"As a client of Kurt’s, I can attest that it was a most gratifying and healthful experience. His knowledge of the practices of <span class="typo-gyrotonic-logo">Gyrotonic®</span> and Pilates is profound and his personal manner is delightful and professional. I cannot imagine a better or more qualified practitioner of these arts which require such skill and personality than Kurt."`,
     attribution: "W. Wegman, Artist"
   }
 ];
