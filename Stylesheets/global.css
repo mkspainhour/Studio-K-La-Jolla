@@ -141,6 +141,9 @@ a:visited {
 	letter-spacing: 0.03125em;
 	font-style: italic;
 }
+.testimonial * .typo-gyrotonic-logo { /* Prevent italicizing the Gyrotonic® logo in testimonial text */
+	font-style: normal;
+}
 .typo-testimonial-attribution {
 	font-size: 1rem;
 	font-weight: 300;
